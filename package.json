@@ -1,0 +1,25 @@
+{
+  "name": "hr-platform",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Unified HR automation platform — monorepo",
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "eslint . --ext .ts,.tsx,.js",
+    "typecheck": "tsc -b --noEmit",
+    "tokens:build": "pnpm --filter @hr/design-tokens build",
+    "leave:dev": "pnpm --filter @hr/leave dev",
+    "leave:test": "pnpm --filter @hr/leave test"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.0"
+  }
+}

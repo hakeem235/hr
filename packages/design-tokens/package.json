@@ -1,0 +1,12 @@
+{
+  "name": "@hr/design-tokens",
+  "version": "0.1.0",
+  "private": true,
+  "description": "W3C design tokens → CSS / RN / Figma via Style Dictionary",
+  "scripts": {
+    "build": "style-dictionary build --config ./config.json"
+  },
+  "devDependencies": {
+    "style-dictionary": "^4.4.0"
+  }
+}

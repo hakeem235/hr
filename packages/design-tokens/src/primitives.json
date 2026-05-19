@@ -1,0 +1,41 @@
+{
+  "color": {
+    "blue":   { "50":{"value":"#EFF4FB"}, "100":{"value":"#D9E6F5"}, "500":{"value":"#2E6FB8"}, "600":{"value":"#1F5C9E"}, "700":{"value":"#184B82"}, "800":{"value":"#123A65"}, "900":{"value":"#0D2B4C"} },
+    "gray":   { "50":{"value":"#F7F6F2"}, "100":{"value":"#EDEBE4"}, "200":{"value":"#DDD9CC"}, "300":{"value":"#C9C4B3"}, "400":{"value":"#A39C88"}, "500":{"value":"#7C7563"}, "700":{"value":"#4A4536"}, "1000":{"value":"#1B1A14"} },
+    "green":  { "50":{"value":"#E7F1EA"}, "500":{"value":"#2E8B57"}, "700":{"value":"#1F5E3B"} },
+    "red":    { "50":{"value":"#FBEAEA"}, "500":{"value":"#C24A4A"}, "700":{"value":"#8A2F2F"} },
+    "orange": { "50":{"value":"#FBF1E4"}, "500":{"value":"#C8702D"}, "700":{"value":"#8A4D1C"} },
+    "white":  { "value":"#FFFFFF" }
+  },
+  "space": {
+    "1":{"value":"4px"}, "2":{"value":"8px"}, "3":{"value":"12px"}, "4":{"value":"16px"},
+    "5":{"value":"24px"}, "6":{"value":"32px"}, "7":{"value":"48px"}, "8":{"value":"64px"}, "9":{"value":"96px"}
+  },
+  "radius": {
+    "sm":{"value":"4px"}, "md":{"value":"8px"}, "lg":{"value":"12px"}, "xl":{"value":"16px"}, "full":{"value":"999px"}
+  },
+  "font": {
+    "family": {
+      "en":{"value":"Hanken Grotesk, -apple-system, sans-serif"},
+      "ar":{"value":"IBM Plex Sans Arabic, Tajawal, sans-serif"},
+      "display":{"value":"Fraunces, Georgia, serif"}
+    },
+    "size": {
+      "xs":{"value":"12px"}, "sm":{"value":"14px"}, "md":{"value":"16px"},
+      "lg":{"value":"18px"}, "xl":{"value":"20px"}, "2xl":{"value":"24px"}, "3xl":{"value":"32px"}
+    },
+    "weight": { "regular":{"value":"400"}, "medium":{"value":"500"}, "semibold":{"value":"600"}, "bold":{"value":"700"} },
+    "lineHeight": { "tight":{"value":"1.2"}, "normal":{"value":"1.5"} },
+    "arabicAdjust": { "value":"1.075" }
+  },
+  "elevation": {
+    "0":{"value":"none"},
+    "1":{"value":"0 1px 2px rgba(27,26,20,.06), 0 1px 3px rgba(27,26,20,.08)"},
+    "2":{"value":"0 2px 4px rgba(27,26,20,.05), 0 6px 16px rgba(27,26,20,.07)"},
+    "3":{"value":"0 12px 32px rgba(27,26,20,.13)"}
+  },
+  "motion": {
+    "duration": { "instant":{"value":"80ms"}, "fast":{"value":"150ms"}, "medium":{"value":"250ms"}, "slow":{"value":"400ms"} },
+    "ease": { "out":{"value":"cubic-bezier(0.2,0,0,1)"}, "emphasized":{"value":"cubic-bezier(0.2,0,0,1.2)"} }
+  }
+}

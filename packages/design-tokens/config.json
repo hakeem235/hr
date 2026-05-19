@@ -1,0 +1,26 @@
+{
+  "source": ["src/**/*.json"],
+  "platforms": {
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "build/",
+      "files": [
+        {
+          "destination": "tokens.css",
+          "format": "css/variables",
+          "options": { "outputReferences": true }
+        }
+      ]
+    },
+    "native": {
+      "transformGroup": "js",
+      "buildPath": "build/",
+      "files": [{ "destination": "tokens.native.js", "format": "javascript/es6" }]
+    },
+    "figma": {
+      "transformGroup": "js",
+      "buildPath": "build/",
+      "files": [{ "destination": "tokens.figma.json", "format": "json/flat" }]
+    }
+  }
+}
