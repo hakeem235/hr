@@ -1,0 +1,20 @@
+export type { EventEnvelope } from './envelope.js';
+export type {
+  DomainEvent,
+  EmployeeOnboarded,
+  PositionChanged,
+  CompensationChanged,
+  EmployeeTerminated,
+  DocumentExpiring,
+  LeaveRequestSubmitted,
+  LeaveApproved,
+  LeaveDeclined,
+  LeaveCancelled,
+  LeaveTaken,
+  LeaveBalanceAdjusted,
+  StepActivated,
+  StepCompleted,
+  WorkflowCompleted,
+  LetterRequested,
+  LetterIssued,
+} from './events.js';

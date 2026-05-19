@@ -14,7 +14,9 @@
     "typecheck": "tsc -b --noEmit",
     "tokens:build": "pnpm --filter @hr/design-tokens build",
     "leave:dev": "pnpm --filter @hr/leave dev",
-    "leave:test": "pnpm --filter @hr/leave test"
+    "leave:test": "pnpm --filter @hr/leave test",
+    "workflow-engine:dev": "pnpm --filter @hr/workflow-engine dev",
+    "workflow-engine:test": "pnpm --filter @hr/workflow-engine test"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.0.0",
