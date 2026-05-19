@@ -1,0 +1,96 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  min-height: 100vh;
+  background-color: var(--color-bg-surface);
+  border-inline-end: 1px solid var(--color-border-subtle);
+  padding-block: var(--space-layout-sm);
+  flex-shrink: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-component-md);
+  padding-inline: var(--space-layout-sm);
+  padding-block-end: var(--space-layout-sm);
+  border-block-end: 1px solid var(--color-border-subtle);
+  margin-block-end: var(--space-component-lg);
+}
+
+.logoMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-md);
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-primary);
+  line-height: var(--font-line-height-tight);
+}
+
+.navList {
+  flex: 1;
+  list-style: none;
+  padding-inline: var(--space-component-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-component-md);
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-component-lg);
+  border-radius: var(--radius-md);
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: background-color var(--motion-duration-fast) var(--motion-ease-out),
+              color var(--motion-duration-fast) var(--motion-ease-out);
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-primary);
+}
+
+.navItem[data-active] {
+  background-color: var(--color-blue-50);
+  color: var(--color-action-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.navIcon {
+  font-size: var(--font-size-md);
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.navLabel {
+  flex: 1;
+}
+
+.sidebarFooter {
+  padding-inline: var(--space-component-lg);
+  padding-block-start: var(--space-component-lg);
+  border-block-start: 1px solid var(--color-border-subtle);
+}

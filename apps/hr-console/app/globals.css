@@ -1,0 +1,194 @@
+/* ─── Design tokens ─────────────────────────────────────────── */
+/* Generated from /packages/design-tokens — do not edit here.  */
+/* Copied at build time; original source: packages/design-tokens/build/tokens.css */
+
+:root {
+  --color-blue-50: #EFF4FB;
+  --color-blue-100: #D9E6F5;
+  --color-blue-500: #2E6FB8;
+  --color-blue-600: #1F5C9E;
+  --color-blue-700: #184B82;
+  --color-blue-800: #123A65;
+  --color-blue-900: #0D2B4C;
+  --color-gray-50: #F7F6F2;
+  --color-gray-100: #EDEBE4;
+  --color-gray-200: #DDD9CC;
+  --color-gray-300: #C9C4B3;
+  --color-gray-400: #A39C88;
+  --color-gray-500: #7C7563;
+  --color-gray-700: #4A4536;
+  --color-gray-1000: #1B1A14;
+  --color-green-50: #E7F1EA;
+  --color-green-500: #2E8B57;
+  --color-green-700: #1F5E3B;
+  --color-red-50: #FBEAEA;
+  --color-red-500: #C24A4A;
+  --color-red-700: #8A2F2F;
+  --color-orange-50: #FBF1E4;
+  --color-orange-500: #C8702D;
+  --color-orange-700: #8A4D1C;
+  --color-white: #FFFFFF;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 999px;
+  --font-family-en: 'Hanken Grotesk', -apple-system, sans-serif;
+  --font-family-ar: 'IBM Plex Sans Arabic', 'Tajawal', sans-serif;
+  --font-family-display: 'Fraunces', Georgia, serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 32px;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-line-height-tight: 1.2;
+  --font-line-height-normal: 1.5;
+  --font-arabic-adjust: 1.075;
+  --elevation-0: none;
+  --elevation-1: 0 1px 2px rgba(27,26,20,.06), 0 1px 3px rgba(27,26,20,.08);
+  --elevation-2: 0 2px 4px rgba(27,26,20,.05), 0 6px 16px rgba(27,26,20,.07);
+  --elevation-3: 0 12px 32px rgba(27,26,20,.13);
+  --motion-duration-instant: 80ms;
+  --motion-duration-fast: 150ms;
+  --motion-duration-medium: 250ms;
+  --motion-duration-slow: 400ms;
+  --motion-ease-out: cubic-bezier(0.2,0,0,1);
+  --motion-ease-emphasized: cubic-bezier(0.2,0,0,1.2);
+
+  /* ── Semantic tokens ── */
+  --color-text-primary: var(--color-gray-1000);
+  --color-text-secondary: var(--color-gray-700);
+  --color-text-tertiary: var(--color-gray-500);
+  --color-text-disabled: var(--color-gray-400);
+  --color-text-inverse: var(--color-gray-50);
+  --color-text-success: var(--color-green-700);
+  --color-text-warning: var(--color-orange-700);
+  --color-text-danger: var(--color-red-700);
+  --color-text-link: var(--color-blue-600);
+  --color-bg-canvas: var(--color-gray-50);
+  --color-bg-surface: var(--color-white);
+  --color-bg-surface-raised: var(--color-white);
+  --color-bg-surface-sunken: var(--color-gray-100);
+  --color-bg-overlay: rgba(27, 26, 20, 0.48);
+  --color-bg-success-soft: var(--color-green-50);
+  --color-bg-warning-soft: var(--color-orange-50);
+  --color-bg-danger-soft: var(--color-red-50);
+  --color-border-subtle: var(--color-gray-200);
+  --color-border-default: var(--color-gray-300);
+  --color-border-strong: var(--color-gray-500);
+  --color-border-focus: var(--color-blue-500);
+  --color-border-danger: var(--color-red-500);
+  --color-action-primary: var(--color-blue-600);
+  --color-action-primary-hover: var(--color-blue-700);
+  --color-action-primary-active: var(--color-blue-800);
+  --color-action-destructive: var(--color-red-500);
+  --space-component-xs: var(--space-1);
+  --space-component-sm: var(--space-2);
+  --space-component-md: var(--space-3);
+  --space-component-lg: var(--space-4);
+  --space-layout-sm: var(--space-5);
+  --space-layout-md: var(--space-6);
+  --space-layout-lg: var(--space-8);
+}
+
+/* ─── Dark mode ─────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --color-text-primary: var(--color-gray-50);
+  --color-text-secondary: var(--color-gray-300);
+  --color-text-tertiary: var(--color-gray-400);
+  --color-bg-canvas: #18171200;
+  --color-bg-surface: #1e1d18;
+  --color-bg-surface-raised: #252420;
+  --color-bg-surface-sunken: #141310;
+  --color-border-subtle: #2e2c24;
+  --color-border-default: var(--color-gray-700);
+}
+
+/* ─── Density: compact (HR ops default) ─────────────────────── */
+[data-density="compact"] {
+  --space-component-xs: 2px;
+  --space-component-sm: 4px;
+  --space-component-md: 8px;
+  --space-component-lg: 12px;
+  --space-layout-sm: var(--space-4);
+  --space-layout-md: var(--space-5);
+  --space-layout-lg: var(--space-6);
+  --font-size-sm: 13px;
+  --font-size-md: 14px;
+}
+
+/* ─── Reset & base ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-family-en);
+  font-size: var(--font-size-md);
+  line-height: var(--font-line-height-normal);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-canvas);
+}
+
+/* Arabic locale: switch font + apply size adjustment */
+:lang(ar), [dir="rtl"] {
+  font-family: var(--font-family-ar);
+  font-size: calc(var(--font-size-md) * var(--font-arabic-adjust));
+}
+
+/* Keep numbers/dates/emails LTR inside RTL context */
+[dir="rtl"] .ltr-isolate {
+  unicode-bidi: isolate;
+  direction: ltr;
+}
+
+/* Focus ring — never suppress without replacement */
+:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  inset-block-start: var(--space-2);
+  inset-inline-start: var(--space-2);
+  padding: var(--space-component-md) var(--space-component-lg);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  z-index: 9999;
+  transform: translateY(-120%);
+  transition: transform var(--motion-duration-fast) var(--motion-ease-out);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}

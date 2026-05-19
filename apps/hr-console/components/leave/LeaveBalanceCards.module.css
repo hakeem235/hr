@@ -1,0 +1,92 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-layout-sm);
+}
+
+.card {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-layout-sm);
+  box-shadow: var(--elevation-1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-lg);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-component-sm);
+}
+
+.cardTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--font-line-height-tight);
+}
+
+.availableBadge {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-success);
+  background-color: var(--color-bg-success-soft);
+  padding-block: 2px;
+  padding-inline: var(--space-component-md);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.track {
+  height: 4px;
+  background-color: var(--color-bg-surface-sunken);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background-color: var(--color-action-primary);
+  border-radius: var(--radius-full);
+  transition: width var(--motion-duration-medium) var(--motion-ease-out);
+  min-width: 2px;
+}
+
+.stats {
+  display: flex;
+  gap: var(--space-layout-sm);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.statLabel {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.statValue {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+/* Skeleton */
+.skeleton {
+  height: 120px;
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-surface-sunken) 25%,
+    var(--color-bg-surface) 50%,
+    var(--color-bg-surface-sunken) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer { to { background-position: -200% 0; } }

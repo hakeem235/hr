@@ -1,0 +1,417 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/shell/TopBar.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.TopBar_topBar__0qx31 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-layout-sm);
+  padding-block: var(--space-layout-sm);
+  padding-inline: var(--space-layout-md);
+  background-color: var(--color-bg-surface);
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  flex-shrink: 0;
+}
+
+.TopBar_headingGroup__25vLk {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-xs);
+}
+
+.TopBar_title__QyOda {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-tight);
+  color: var(--color-text-primary);
+}
+
+.TopBar_subtitle__mxLsX {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.TopBar_controls__ptLkk {
+  display: flex;
+  align-items: center;
+  gap: var(--space-component-md);
+  flex-shrink: 0;
+  -webkit-padding-before: var(--space-component-xs);
+          padding-block-start: var(--space-component-xs);
+}
+
+.TopBar_localeToggle__i_TW9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: border-color var(--motion-duration-fast) var(--motion-ease-out),
+              color var(--motion-duration-fast) var(--motion-ease-out);
+}
+
+.TopBar_localeToggle__i_TW9:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/ui/Button.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Button_btn__kzInP {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-component-sm);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: background-color var(--motion-duration-fast) var(--motion-ease-out),
+              border-color var(--motion-duration-fast) var(--motion-ease-out),
+              color var(--motion-duration-fast) var(--motion-ease-out);
+}
+
+.Button_btn__kzInP:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.Button_sm__pnQzd {
+  padding-block: var(--space-component-xs);
+  padding-inline: var(--space-component-md);
+  font-size: var(--font-size-xs);
+  height: 28px;
+}
+.Button_md__ktIWF {
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  font-size: var(--font-size-sm);
+  height: 36px;
+}
+.Button_lg__s7W56 {
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-5);
+  font-size: var(--font-size-md);
+  height: 44px;
+}
+
+/* Variants */
+.Button_primary__6_Dls {
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-action-primary);
+}
+.Button_primary__6_Dls:hover:not(:disabled) {
+  background-color: var(--color-action-primary-hover);
+  border-color: var(--color-action-primary-hover);
+}
+.Button_primary__6_Dls:active:not(:disabled) {
+  background-color: var(--color-action-primary-active);
+}
+
+.Button_secondary__uuOdH {
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  border-color: var(--color-border-default);
+}
+.Button_secondary__uuOdH:hover:not(:disabled) {
+  background-color: var(--color-bg-surface-sunken);
+  border-color: var(--color-border-strong);
+}
+
+.Button_ghost__gZqlA {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border-color: transparent;
+}
+.Button_ghost__gZqlA:hover:not(:disabled) {
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-primary);
+}
+
+.Button_destructive__9VB0j {
+  background-color: var(--color-bg-danger-soft);
+  color: var(--color-text-danger);
+  border-color: var(--color-border-danger);
+}
+.Button_destructive__9VB0j:hover:not(:disabled) {
+  background-color: var(--color-red-50);
+}
+
+/* Spinner */
+.Button_spinner__DYdB3 {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-inline-end-color: transparent;
+  border-radius: var(--radius-full);
+  animation: Button_spin__ESAWP 0.6s linear infinite;
+}
+@keyframes Button_spin__ESAWP { to { transform: rotate(360deg); } }
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/approvals/ApprovalCard.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.ApprovalCard_card__hn0Zn {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-inline-start-width: 3px;
+  border-inline-start-color: var(--mod-color, var(--color-action-primary));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow var(--motion-duration-fast) var(--motion-ease-out);
+}
+.ApprovalCard_card__hn0Zn:hover { box-shadow: var(--elevation-2); }
+
+.ApprovalCard_moduleTag__RLDtd {
+  padding-block: var(--space-component-xs);
+  padding-inline: var(--space-component-lg);
+  background-color: var(--color-bg-surface-sunken);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--mod-color, var(--color-action-primary));
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ApprovalCard_body__Qmubz {
+  padding: var(--space-layout-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-lg);
+}
+
+.ApprovalCard_header__0At6b {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-layout-sm);
+}
+
+.ApprovalCard_title__zDE_u {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--font-line-height-tight);
+}
+
+.ApprovalCard_requester__PdnEt {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  -webkit-margin-before: var(--space-component-xs);
+          margin-block-start: var(--space-component-xs);
+}
+
+.ApprovalCard_slaBadge__PiRc6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.ApprovalCard_slaLabel__e091G {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ApprovalCard_slaBadge__PiRc6 bdi {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+}
+
+.ApprovalCard_slaBadge__PiRc6[data-overdue] bdi {
+  color: var(--color-text-danger);
+}
+
+.ApprovalCard_summary__4n_3X {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--font-line-height-normal);
+}
+
+.ApprovalCard_noteRow__YVxRD {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-sm);
+  animation: ApprovalCard_fadeIn__6XqY0 var(--motion-duration-fast) var(--motion-ease-out);
+}
+@keyframes ApprovalCard_fadeIn__6XqY0 { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+.ApprovalCard_noteLabel__D8Mot {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.ApprovalCard_noteInput__AAxTC {
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-component-lg);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-surface);
+  resize: vertical;
+  width: 100%;
+}
+.ApprovalCard_noteInput__AAxTC:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(46,111,184,.15);
+}
+
+.ApprovalCard_noteHint__n6dWl {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.ApprovalCard_actions___fNIE {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-component-md);
+  -webkit-padding-before: var(--space-component-md);
+          padding-block-start: var(--space-component-md);
+  -webkit-border-before: 1px solid var(--color-border-subtle);
+          border-block-start: 1px solid var(--color-border-subtle);
+}
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/approvals/page.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_main__cmwBU {
+  flex: 1 1;
+  overflow-y: auto;
+  padding: var(--space-layout-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-layout-sm);
+}
+
+.page_filterBar__02W8O {
+  display: flex;
+  gap: var(--space-component-sm);
+  flex-wrap: wrap;
+}
+
+.page_filterBtn__a0CnA {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-component-sm);
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color var(--motion-duration-fast) var(--motion-ease-out),
+              border-color var(--motion-duration-fast) var(--motion-ease-out),
+              color var(--motion-duration-fast) var(--motion-ease-out);
+}
+.page_filterBtn__a0CnA:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+}
+.page_filterBtn__a0CnA[aria-pressed="true"] {
+  background-color: var(--color-blue-50);
+  border-color: var(--color-action-primary);
+  color: var(--color-action-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.page_filterCount__c8_rb {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding-inline: var(--space-component-xs);
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+.page_filterBtn__a0CnA[aria-pressed="true"] .page_filterCount__c8_rb {
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+}
+
+.page_list__2swEE {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-layout-sm);
+}
+
+.page_empty__lmhM6 {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: var(--space-9);
+  text-align: center;
+  gap: var(--space-component-md);
+}
+
+.page_emptyIcon__VEJMd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background-color: var(--color-bg-success-soft);
+  color: var(--color-text-success);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-2xl);
+}
+
+.page_emptyTitle__THUax {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.page_emptySub__HqVUV {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  max-width: 320px;
+}
+
+.page_srOnly__VzW_B {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+

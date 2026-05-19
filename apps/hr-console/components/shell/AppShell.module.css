@@ -1,0 +1,13 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--color-bg-canvas);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* prevent flex blowout */
+  overflow: hidden;
+}

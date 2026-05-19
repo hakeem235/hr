@@ -1,0 +1,19 @@
+{
+  "name": "@hr/workflow-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Config-driven workflow state machine for HR approval flows",
+  "scripts": {
+    "dev": "node --import tsx/esm src/index.ts",
+    "test": "node --import tsx/esm --test test/*.test.ts",
+    "build": "tsc -b"
+  },
+  "dependencies": {
+    "fastify": "^4.26.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,603 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/shell/TopBar.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.TopBar_topBar__0qx31 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-layout-sm);
+  padding-block: var(--space-layout-sm);
+  padding-inline: var(--space-layout-md);
+  background-color: var(--color-bg-surface);
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  flex-shrink: 0;
+}
+
+.TopBar_headingGroup__25vLk {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-xs);
+}
+
+.TopBar_title__QyOda {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-tight);
+  color: var(--color-text-primary);
+}
+
+.TopBar_subtitle__mxLsX {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.TopBar_controls__ptLkk {
+  display: flex;
+  align-items: center;
+  gap: var(--space-component-md);
+  flex-shrink: 0;
+  -webkit-padding-before: var(--space-component-xs);
+          padding-block-start: var(--space-component-xs);
+}
+
+.TopBar_localeToggle__i_TW9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: border-color var(--motion-duration-fast) var(--motion-ease-out),
+              color var(--motion-duration-fast) var(--motion-ease-out);
+}
+
+.TopBar_localeToggle__i_TW9:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+}
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/leave/LeaveBalanceCards.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.LeaveBalanceCards_grid__tEuKG {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: var(--space-layout-sm);
+  gap: var(--space-layout-sm);
+}
+
+.LeaveBalanceCards_card__fLAMG {
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-layout-sm);
+  box-shadow: var(--elevation-1);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-lg);
+}
+
+.LeaveBalanceCards_cardHeader__XkaQx {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-component-sm);
+}
+
+.LeaveBalanceCards_cardTitle__HnXQx {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--font-line-height-tight);
+}
+
+.LeaveBalanceCards_availableBadge__R7xa9 {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-success);
+  background-color: var(--color-bg-success-soft);
+  padding-block: 2px;
+  padding-inline: var(--space-component-md);
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.LeaveBalanceCards_track__MXKIk {
+  height: 4px;
+  background-color: var(--color-bg-surface-sunken);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.LeaveBalanceCards_fill__3eqEs {
+  height: 100%;
+  background-color: var(--color-action-primary);
+  border-radius: var(--radius-full);
+  transition: width var(--motion-duration-medium) var(--motion-ease-out);
+  min-width: 2px;
+}
+
+.LeaveBalanceCards_stats__I864U {
+  display: flex;
+  gap: var(--space-layout-sm);
+}
+
+.LeaveBalanceCards_stat__bAro7 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.LeaveBalanceCards_statLabel__w2bIS {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+.LeaveBalanceCards_statValue__qkkGb {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+/* Skeleton */
+.LeaveBalanceCards_skeleton__6srxg {
+  height: 120px;
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-surface-sunken) 25%,
+    var(--color-bg-surface) 50%,
+    var(--color-bg-surface-sunken) 75%
+  );
+  background-size: 200% 100%;
+  animation: LeaveBalanceCards_shimmer__ds7qv 1.5s infinite;
+}
+@keyframes LeaveBalanceCards_shimmer__ds7qv { to { background-position: -200% 0; } }
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/ui/StatusPill.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.StatusPill_pill__Pkn1Y {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 2px;
+  padding-inline: var(--space-component-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.StatusPill_warning__U2tGS {
+  background-color: var(--color-bg-warning-soft);
+  color: var(--color-text-warning);
+  border-color: var(--color-orange-500);
+}
+.StatusPill_success__rFQmV {
+  background-color: var(--color-bg-success-soft);
+  color: var(--color-text-success);
+  border-color: var(--color-green-500);
+}
+.StatusPill_danger__fq8cm {
+  background-color: var(--color-bg-danger-soft);
+  color: var(--color-text-danger);
+  border-color: var(--color-red-500);
+}
+.StatusPill_neutral__MLppS {
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-tertiary);
+  border-color: var(--color-border-default);
+}
+
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/leave/LeaveRequestsTable.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.LeaveRequestsTable_tableWrap__LF6__ {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  background-color: var(--color-bg-surface);
+  box-shadow: var(--elevation-1);
+}
+
+.LeaveRequestsTable_table__vLkT8 {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.LeaveRequestsTable_table__vLkT8 thead tr {
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  background-color: var(--color-bg-surface-sunken);
+}
+
+.LeaveRequestsTable_table__vLkT8 th {
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-component-lg);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  text-align: start;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.LeaveRequestsTable_table__vLkT8 td {
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-component-lg);
+  color: var(--color-text-primary);
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  vertical-align: middle;
+}
+
+.LeaveRequestsTable_table__vLkT8 tbody tr:last-child td {
+  -webkit-border-after: none;
+          border-block-end: none;
+}
+
+.LeaveRequestsTable_table__vLkT8 tbody tr:hover td {
+  background-color: var(--color-bg-surface-sunken);
+}
+
+.LeaveRequestsTable_employeeId__uISVz {
+  font-family: var(--font-family-en);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-link);
+}
+
+.LeaveRequestsTable_typeCell__4G7lF {
+  text-transform: capitalize;
+  color: var(--color-text-secondary);
+}
+
+.LeaveRequestsTable_dates__UIBut {
+  white-space: nowrap;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+/* Skeleton cells */
+.LeaveRequestsTable_skelCell__wiGRj {
+  display: block;
+  height: 14px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-surface-sunken) 25%,
+    var(--color-bg-canvas) 50%,
+    var(--color-bg-surface-sunken) 75%
+  );
+  background-size: 200% 100%;
+  animation: LeaveRequestsTable_shimmer__j3AYj 1.5s infinite;
+  width: 80%;
+}
+@keyframes LeaveRequestsTable_shimmer__j3AYj { to { background-position: -200% 0; } }
+
+/* Empty state */
+.LeaveRequestsTable_empty___HPfx {
+  padding-block: var(--space-8);
+  padding-inline: var(--space-layout-md);
+  text-align: center;
+  background-color: var(--color-bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--color-border-default);
+}
+
+.LeaveRequestsTable_emptyTitle__nd2nC {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  -webkit-margin-after: var(--space-component-sm);
+          margin-block-end: var(--space-component-sm);
+}
+
+.LeaveRequestsTable_emptySub__2Xdjl {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}
+
+.LeaveRequestsTable_retryBtn__UATuR {
+  -webkit-margin-before: var(--space-component-lg);
+          margin-block-start: var(--space-component-lg);
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  background: transparent;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/ui/Button.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Button_btn__kzInP {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-component-sm);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: background-color var(--motion-duration-fast) var(--motion-ease-out),
+              border-color var(--motion-duration-fast) var(--motion-ease-out),
+              color var(--motion-duration-fast) var(--motion-ease-out);
+}
+
+.Button_btn__kzInP:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.Button_sm__pnQzd {
+  padding-block: var(--space-component-xs);
+  padding-inline: var(--space-component-md);
+  font-size: var(--font-size-xs);
+  height: 28px;
+}
+.Button_md__ktIWF {
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  font-size: var(--font-size-sm);
+  height: 36px;
+}
+.Button_lg__s7W56 {
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-5);
+  font-size: var(--font-size-md);
+  height: 44px;
+}
+
+/* Variants */
+.Button_primary__6_Dls {
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-action-primary);
+}
+.Button_primary__6_Dls:hover:not(:disabled) {
+  background-color: var(--color-action-primary-hover);
+  border-color: var(--color-action-primary-hover);
+}
+.Button_primary__6_Dls:active:not(:disabled) {
+  background-color: var(--color-action-primary-active);
+}
+
+.Button_secondary__uuOdH {
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  border-color: var(--color-border-default);
+}
+.Button_secondary__uuOdH:hover:not(:disabled) {
+  background-color: var(--color-bg-surface-sunken);
+  border-color: var(--color-border-strong);
+}
+
+.Button_ghost__gZqlA {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border-color: transparent;
+}
+.Button_ghost__gZqlA:hover:not(:disabled) {
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-primary);
+}
+
+.Button_destructive__9VB0j {
+  background-color: var(--color-bg-danger-soft);
+  color: var(--color-text-danger);
+  border-color: var(--color-border-danger);
+}
+.Button_destructive__9VB0j:hover:not(:disabled) {
+  background-color: var(--color-red-50);
+}
+
+/* Spinner */
+.Button_spinner__DYdB3 {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-inline-end-color: transparent;
+  border-radius: var(--radius-full);
+  animation: Button_spin__ESAWP 0.6s linear infinite;
+}
+@keyframes Button_spin__ESAWP { to { transform: rotate(360deg); } }
+
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/leave/NewLeaveDrawer.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.NewLeaveDrawer_dialog__k4PSU {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.NewLeaveDrawer_dialog__k4PSU::-webkit-backdrop {
+  background-color: var(--color-bg-overlay);
+}
+
+.NewLeaveDrawer_dialog__k4PSU::backdrop {
+  background-color: var(--color-bg-overlay);
+}
+
+.NewLeaveDrawer_drawer__GwQLa {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--color-bg-surface);
+  box-shadow: var(--elevation-3);
+  display: flex;
+  flex-direction: column;
+  animation: NewLeaveDrawer_slideIn__jElXW var(--motion-duration-medium) var(--motion-ease-out);
+}
+
+@keyframes NewLeaveDrawer_slideIn__jElXW {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+[dir="rtl"] .NewLeaveDrawer_drawer__GwQLa {
+  inset-inline-end: auto;
+  inset-inline-start: 0;
+  animation: NewLeaveDrawer_slideInRtl__O9MtW var(--motion-duration-medium) var(--motion-ease-out);
+}
+
+@keyframes NewLeaveDrawer_slideInRtl__O9MtW {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+
+.NewLeaveDrawer_drawerHeader__EnSvs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-layout-sm);
+  padding-inline: var(--space-layout-sm);
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  flex-shrink: 0;
+}
+
+.NewLeaveDrawer_drawerTitle__hJ1cn {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.NewLeaveDrawer_closeBtn__rwcmb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+}
+.NewLeaveDrawer_closeBtn__rwcmb:hover { background-color: var(--color-bg-surface-sunken); }
+
+.NewLeaveDrawer_form__w5Jvc {
+  flex: 1 1;
+  overflow-y: auto;
+  padding: var(--space-layout-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-layout-sm);
+}
+
+.NewLeaveDrawer_field__VOHCP {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-sm);
+}
+
+.NewLeaveDrawer_row__nEAlW {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--space-component-lg);
+  gap: var(--space-component-lg);
+}
+
+.NewLeaveDrawer_label__rJ2Wp {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.NewLeaveDrawer_input__h1ylF {
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-component-lg);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-surface);
+  transition: border-color var(--motion-duration-fast) var(--motion-ease-out);
+  width: 100%;
+}
+.NewLeaveDrawer_input__h1ylF:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(46,111,184,.15);
+}
+
+.NewLeaveDrawer_textarea__Ws5s7 {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.NewLeaveDrawer_errorBanner__RLzW_ {
+  background-color: var(--color-bg-danger-soft);
+  color: var(--color-text-danger);
+  border: 1px solid var(--color-border-danger);
+  border-radius: var(--radius-md);
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-component-lg);
+  font-size: var(--font-size-sm);
+}
+
+.NewLeaveDrawer_formActions__B3vdN {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-component-md);
+  -webkit-padding-before: var(--space-component-lg);
+          padding-block-start: var(--space-component-lg);
+  -webkit-border-before: 1px solid var(--color-border-subtle);
+          border-block-start: 1px solid var(--color-border-subtle);
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/leave/page.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_main__t6cpc {
+  flex: 1 1;
+  overflow-y: auto;
+  padding: var(--space-layout-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-layout-md);
+}
+
+.page_section__C1lln {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-layout-sm);
+}
+
+.page_sectionTitle__T70Ce {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  line-height: var(--font-line-height-tight);
+}
+

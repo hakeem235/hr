@@ -1,0 +1,19 @@
+{
+  "name": "@hr/people",
+  "version": "0.1.0",
+  "description": "Employee master / HRIS core — org chart, positions, compensation",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "dev": "node --import tsx/esm src/index.ts",
+    "build": "tsc -b",
+    "test": "node --import tsx/esm --test test/domain.test.ts"
+  },
+  "dependencies": {
+    "fastify": "^4.26.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0",
+    "typescript": "^5.4.0"
+  }
+}
