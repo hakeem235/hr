@@ -1,50 +1,105 @@
 'use client';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocale } from '@/lib/locale-context';
 import { TopBar } from '@/components/shell/TopBar';
 import { LeaveBalanceCards } from '@/components/leave/LeaveBalanceCards';
 import { LeaveRequestsTable } from '@/components/leave/LeaveRequestsTable';
 import { NewLeaveDrawer } from '@/components/leave/NewLeaveDrawer';
+import { LeaveDetailDrawer } from '@/components/leave/LeaveDetailDrawer';
 import { Button } from '@/components/ui/Button';
 import { fetchLeaveRequests } from '@/lib/api';
-import type { LeaveRecord, LeaveBalance, LeaveType } from '@/lib/types';
+import type { LeaveRecord, LeaveBalance, LeaveStatus } from '@/lib/types';
 import styles from './page.module.css';
+
+const STATUS_FILTERS: Array<{ value: '' | LeaveStatus; labelKey: string }> = [
+  { value: '',                labelKey: 'leave_filter_all' },
+  { value: 'pending_approval', labelKey: 'status_pending_approval' },
+  { value: 'approved',         labelKey: 'status_approved' },
+  { value: 'scheduled',        labelKey: 'status_scheduled' },
+  { value: 'taken',            labelKey: 'status_taken' },
+  { value: 'declined',         labelKey: 'status_declined' },
+  { value: 'cancelled',        labelKey: 'status_cancelled' },
+];
+
+const PAGE_SIZE = 20;
 
 export default function LeavePage() {
   const { t } = useLocale();
 
   const [requests, setRequests] = useState<LeaveRecord[]>([]);
-  const [balances, setBalances] = useState<LeaveBalance[]>([]);
-  const [leaveTypes, setLeaveTypes] = useState<LeaveType[]>([]);
+  const [balances, setBalances] = useState<LeaveBalance[]>(MOCK_BALANCES);
   const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [nextCursor, setNextCursor] = useState<string | undefined>(undefined);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [detailId, setDetailId] = useState<string | null>(null);
 
-  const load = useCallback(async () => {
+  // Filter state
+  const [search, setSearch] = useState('');
+  const [statusFilter, setStatusFilter] = useState<'' | LeaveStatus>('');
+  const searchDebounce = useRef<ReturnType<typeof setTimeout>>();
+
+  const load = useCallback(async (employeeId?: string, status?: string) => {
     setLoading(true);
     setError(null);
     try {
-      /* In production: entityId from auth context. Use placeholder for now. */
-      const [reqs] = await Promise.allSettled([
-        fetchLeaveRequests({ limit: 50 }),
-      ]);
-
-      if (reqs.status === 'fulfilled') setRequests(reqs.value.items ?? []);
-      else setRequests(MOCK_REQUESTS);
-
-      /* Balances and types fall back to mock if service isn't running */
-      setBalances(MOCK_BALANCES);
-      setLeaveTypes([]);
+      const result = await fetchLeaveRequests({
+        employeeId: employeeId || undefined,
+        status: status || undefined,
+        limit: PAGE_SIZE,
+      });
+      setRequests(result.items.length > 0 ? result.items : MOCK_REQUESTS);
+      setNextCursor(result.nextCursor);
     } catch {
       setError(t('error_fetch'));
       setRequests(MOCK_REQUESTS);
-      setBalances(MOCK_BALANCES);
+      setNextCursor(undefined);
     } finally {
       setLoading(false);
     }
   }, [t]);
 
   useEffect(() => { load(); }, [load]);
+
+  // Debounce search input
+  function handleSearchChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const val = e.target.value;
+    setSearch(val);
+    clearTimeout(searchDebounce.current);
+    searchDebounce.current = setTimeout(() => {
+      load(val, statusFilter);
+    }, 350);
+  }
+
+  function handleStatusChange(val: '' | LeaveStatus) {
+    setStatusFilter(val);
+    load(search, val);
+  }
+
+  async function handleLoadMore() {
+    if (!nextCursor || loadingMore) return;
+    setLoadingMore(true);
+    try {
+      const result = await fetchLeaveRequests({
+        employeeId: search || undefined,
+        status: statusFilter || undefined,
+        cursor: nextCursor,
+        limit: PAGE_SIZE,
+      });
+      setRequests((prev) => [...prev, ...result.items]);
+      setNextCursor(result.nextCursor);
+    } catch {
+      /* silently ignore load-more failures */
+    } finally {
+      setLoadingMore(false);
+    }
+  }
+
+  function handleCancelled() {
+    setDetailId(null);
+    load(search, statusFilter);
+  }
 
   return (
     <>
@@ -67,23 +122,69 @@ export default function LeavePage() {
         </section>
 
         <section aria-labelledby="requests-heading" className={styles.section}>
-          <h2 id="requests-heading" className={styles.sectionTitle}>
-            {t('leave_requests_title')}
-          </h2>
+          <div className={styles.tableHeader}>
+            <h2 id="requests-heading" className={styles.sectionTitle}>
+              {t('leave_requests_title')}
+            </h2>
+
+            <div className={styles.filterBar} role="search">
+              <input
+                type="search"
+                className={styles.searchInput}
+                placeholder={t('leave_search_placeholder')}
+                value={search}
+                onChange={handleSearchChange}
+                aria-label={t('leave_search_placeholder')}
+              />
+              <div className={styles.statusFilters} role="group" aria-label={t('leave_filter_all')}>
+                {STATUS_FILTERS.map(({ value, labelKey }) => (
+                  <button
+                    key={value}
+                    className={styles.filterBtn}
+                    aria-pressed={statusFilter === value}
+                    onClick={() => handleStatusChange(value)}
+                  >
+                    {t(labelKey as Parameters<typeof t>[0])}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
           <LeaveRequestsTable
             requests={requests}
             loading={loading}
             error={error ?? undefined}
-            onRetry={load}
+            onRetry={() => load(search, statusFilter)}
+            onRowClick={(req) => setDetailId(req.id)}
           />
+
+          {nextCursor && !loading && (
+            <div className={styles.loadMore}>
+              <button
+                className={styles.loadMoreBtn}
+                onClick={handleLoadMore}
+                disabled={loadingMore}
+                aria-busy={loadingMore}
+              >
+                {loadingMore ? t('leave_loading_more') : t('leave_load_more')}
+              </button>
+            </div>
+          )}
         </section>
       </main>
 
       <NewLeaveDrawer
         open={drawerOpen}
-        leaveTypes={leaveTypes}
+        leaveTypes={[]}
         onClose={() => setDrawerOpen(false)}
-        onSuccess={load}
+        onSuccess={() => { setDrawerOpen(false); load(search, statusFilter); }}
+      />
+
+      <LeaveDetailDrawer
+        requestId={detailId}
+        onClose={() => setDetailId(null)}
+        onCancelled={handleCancelled}
       />
     </>
   );

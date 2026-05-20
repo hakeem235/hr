@@ -1,0 +1,152 @@
+.canvasContainer {
+  flex: 1;
+  overflow: auto;
+  background-color: var(--color-bg-canvas);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  position: relative;
+  min-height: 0;
+}
+
+.canvas {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.arrowsSvg {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  pointer-events: none;
+}
+
+.arrowLabel {
+  font-size: 10px;
+  fill: #7C7563;
+  font-family: var(--font-family-en);
+}
+
+/* ── Step nodes ── */
+.node {
+  display: flex;
+  align-items: center;
+  gap: var(--space-component-md);
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-md);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border-default);
+  background-color: var(--color-bg-surface);
+  cursor: pointer;
+  text-align: start;
+  font-family: inherit;
+  transition: border-color var(--motion-duration-fast) var(--motion-ease-out),
+              box-shadow var(--motion-duration-fast) var(--motion-ease-out);
+  box-shadow: var(--elevation-1);
+}
+.node:hover {
+  border-color: var(--color-border-strong);
+  box-shadow: var(--elevation-2);
+}
+.node:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+.nodeSelected {
+  border-color: var(--color-action-primary) !important;
+  box-shadow: 0 0 0 3px rgba(46,111,184,0.18) !important;
+}
+
+.nodeIcon {
+  font-size: var(--font-size-lg);
+  flex-shrink: 0;
+  width: 28px;
+  text-align: center;
+}
+
+.nodeBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.nodeId {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nodeDesc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ── Color coding ── */
+.colorApproval .nodeIcon { color: var(--color-blue-600); }
+.colorApproval.node { border-inline-start: 3px solid var(--color-blue-600); }
+
+.colorAutomated .nodeIcon { color: var(--color-green-500); }
+.colorAutomated.node { border-inline-start: 3px solid var(--color-green-500); }
+
+.colorWait .nodeIcon { color: #D97706; }
+.colorWait.node { border-inline-start: 3px solid #D97706; }
+
+.colorBranch .nodeIcon { color: #7C3AED; }
+.colorBranch.node { border-inline-start: 3px solid #7C3AED; }
+
+.colorParallel .nodeIcon { color: #7C3AED; }
+.colorParallel.node { border-inline-start: 3px solid #7C3AED; }
+
+.colorTerminal .nodeIcon { color: var(--color-text-tertiary); }
+.colorTerminal.node { border-inline-start: 3px solid var(--color-border-default); }
+
+/* ── Add step button ── */
+.addStepBtn {
+  width: 22px;
+  height: 22px;
+  border-radius: var(--radius-full);
+  border: 1.5px dashed var(--color-border-default);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--motion-duration-fast) var(--motion-ease-out),
+              color var(--motion-duration-fast) var(--motion-ease-out),
+              background-color var(--motion-duration-fast) var(--motion-ease-out);
+}
+.addStepBtn:hover {
+  border-color: var(--color-action-primary);
+  color: var(--color-action-primary);
+  background-color: var(--color-blue-50);
+  border-style: solid;
+}
+.addStepBtn:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Empty state ── */
+.empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-layout-lg);
+}
+
+.emptyText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  text-align: center;
+}

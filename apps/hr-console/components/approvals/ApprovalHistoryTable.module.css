@@ -1,0 +1,115 @@
+.tableWrap {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  background-color: var(--color-bg-surface);
+  box-shadow: var(--elevation-1);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.table thead tr {
+  border-block-end: 1px solid var(--color-border-subtle);
+  background-color: var(--color-bg-surface-sunken);
+}
+
+.table th {
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-component-lg);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  text-align: start;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.table td {
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-component-lg);
+  color: var(--color-text-primary);
+  border-block-end: 1px solid var(--color-border-subtle);
+  vertical-align: middle;
+}
+
+.table tbody tr:last-child td { border-block-end: none; }
+.table tbody tr:hover td { background-color: var(--color-bg-surface-sunken); }
+
+/* ── Module pill ── */
+.modulePill {
+  display: inline-block;
+  padding-block: 2px;
+  padding-inline: var(--space-component-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.modulePill[data-module="leave"]   { background: var(--color-blue-50);   color: var(--color-blue-600); }
+.modulePill[data-module="letters"] { background: #fff3e0;                color: var(--color-orange-500); }
+.modulePill[data-module="payroll"] { background: #e8f5e9;                color: var(--color-green-500); }
+.modulePill[data-module="benefits"]{ background: var(--color-bg-subtle);  color: var(--color-text-secondary); }
+
+.titleCell {
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+
+.note {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  font-style: italic;
+  margin: 4px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.dim { color: var(--color-text-tertiary); }
+
+/* ── Skeleton ── */
+.skel {
+  display: block;
+  height: 14px;
+  width: 80%;
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-surface-sunken) 25%,
+    var(--color-bg-canvas) 50%,
+    var(--color-bg-surface-sunken) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+@keyframes shimmer { to { background-position: -200% 0; } }
+
+/* ── Empty state ── */
+.empty {
+  padding-block: var(--space-8);
+  padding-inline: var(--space-layout-md);
+  text-align: center;
+  background-color: var(--color-bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--color-border-default);
+}
+.emptyTitle {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  margin-block-end: var(--space-component-sm);
+}
+.emptySub {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}

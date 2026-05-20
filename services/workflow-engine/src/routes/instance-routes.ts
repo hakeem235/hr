@@ -43,6 +43,16 @@ export function registerInstanceRoutes(app: FastifyInstance, executor: WorkflowE
   });
 
   /* ── Get instance + step executions ───────────────────────── */
+  app.get('/api/v1/workflow-instances', async (req, reply) => {
+    const q = req.query as Record<string, string>;
+    const result = await (executor as any).repo.listInstances({
+      status: q.status,
+      limit: q.limit ? Number(q.limit) : 50,
+      cursor: q.cursor,
+    });
+    return reply.send(result);
+  });
+
   app.get('/api/v1/workflow-instances/:id', async (req, reply) => {
     const { id } = req.params as { id: string };
     const instance = await (executor as any).repo.getInstance(id);

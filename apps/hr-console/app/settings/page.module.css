@@ -1,0 +1,75 @@
+.main {
+  padding: var(--space-layout-md);
+  max-width: 800px;
+}
+
+.sectionList { display: flex; flex-direction: column; gap: var(--space-component-sm); }
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: var(--space-component-md);
+  padding: var(--space-component-md) var(--space-layout-sm);
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--motion-duration-fast) var(--motion-ease-out);
+}
+
+.section:hover { border-color: var(--color-border-default); }
+
+.sectionIcon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-subtle);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  flex-shrink: 0;
+}
+
+.sectionBody { flex: 1; }
+
+.sectionTitle {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+  margin: 0 0 4px;
+}
+
+.sectionSub {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.sectionAction { flex-shrink: 0; }
+
+.comingSoon {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-subtle);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.openLink {
+  display: inline-flex;
+  align-items: center;
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-action-primary);
+  text-decoration: none;
+  transition: background-color var(--motion-duration-fast) var(--motion-ease-out);
+}
+.openLink:hover { background-color: var(--color-bg-surface-sunken); }
+.openLink:focus-visible { outline: 2px solid var(--color-border-focus); outline-offset: 2px; }

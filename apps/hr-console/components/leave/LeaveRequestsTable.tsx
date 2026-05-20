@@ -1,7 +1,7 @@
 'use client';
 import { useLocale } from '@/lib/locale-context';
 import { StatusPill } from '@/components/ui/StatusPill';
-import type { LeaveRecord } from '@/lib/types';
+import type { LeaveRecord, LeaveStatus } from '@/lib/types';
 import styles from './LeaveRequestsTable.module.css';
 
 interface LeaveRequestsTableProps {
@@ -9,6 +9,7 @@ interface LeaveRequestsTableProps {
   loading?: boolean;
   error?: string;
   onRetry?: () => void;
+  onRowClick?: (req: LeaveRecord) => void;
 }
 
 function formatDate(iso: string, locale: string) {
@@ -19,11 +20,16 @@ function formatDate(iso: string, locale: string) {
   });
 }
 
+const STATUS_OPTIONS: LeaveStatus[] = [
+  'pending_approval', 'approved', 'declined', 'cancelled', 'scheduled', 'taken',
+];
+
 export function LeaveRequestsTable({
   requests,
   loading,
   error,
   onRetry,
+  onRowClick,
 }: LeaveRequestsTableProps) {
   const { t, locale } = useLocale();
 
@@ -87,13 +93,21 @@ export function LeaveRequestsTable({
         </thead>
         <tbody>
           {requests.map((req) => (
-            <tr key={req.id}>
+            <tr
+              key={req.id}
+              onClick={onRowClick ? () => onRowClick(req) : undefined}
+              onKeyDown={onRowClick ? (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onRowClick(req); } } : undefined}
+              tabIndex={onRowClick ? 0 : undefined}
+              role={onRowClick ? 'button' : undefined}
+              aria-label={onRowClick ? `${req.leaveTypeId} ${req.startDate} ${t(`status_${req.status}` as Parameters<typeof t>[0])}` : undefined}
+              className={onRowClick ? styles.rowClickable : undefined}
+            >
               <td>
                 <span className={styles.employeeId}>
                   <bdi className="ltr-isolate">{req.employeeId}</bdi>
                 </span>
               </td>
-              <td className={styles.typeCell}>{req.leaveTypeId}</td>
+              <td className={styles.typeCell}>{req.leaveTypeId.replace(/_/g, ' ')}</td>
               <td>
                 <span className={styles.dates}>
                   <bdi className="ltr-isolate">{formatDate(req.startDate, locale)}</bdi>

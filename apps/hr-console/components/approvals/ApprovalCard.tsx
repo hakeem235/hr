@@ -8,6 +8,9 @@ import styles from './ApprovalCard.module.css';
 interface ApprovalCardProps {
   item: ApprovalItem;
   onDecide: (instanceId: string, stepId: string, decision: 'approved' | 'declined', note?: string) => Promise<void>;
+  selectable?: boolean;
+  selected?: boolean;
+  onSelect?: (instanceId: string, checked: boolean) => void;
 }
 
 const MODULE_COLOR: Record<string, string> = {
@@ -23,7 +26,7 @@ function formatSla(iso: string, locale: string) {
   });
 }
 
-export function ApprovalCard({ item, onDecide }: ApprovalCardProps) {
+export function ApprovalCard({ item, onDecide, selectable, selected, onSelect }: ApprovalCardProps) {
   const { t, locale } = useLocale();
   const [declining, setDeclining] = useState(false);
   const [note, setNote] = useState('');
@@ -42,7 +45,17 @@ export function ApprovalCard({ item, onDecide }: ApprovalCardProps) {
   const isOverdue = slaDue < new Date();
 
   return (
-    <article className={styles.card} aria-label={item.title}>
+    <article className={styles.card} aria-label={item.title} aria-selected={selectable ? selected : undefined}>
+      {selectable && (
+        <label className={styles.checkboxWrap} aria-label={`Select ${item.title}`}>
+          <input
+            type="checkbox"
+            className={styles.checkbox}
+            checked={selected ?? false}
+            onChange={(e) => onSelect?.(item.instanceId, e.target.checked)}
+          />
+        </label>
+      )}
       <div className={styles.moduleTag} style={{ '--mod-color': MODULE_COLOR[item.module] } as React.CSSProperties}>
         {item.module}
       </div>

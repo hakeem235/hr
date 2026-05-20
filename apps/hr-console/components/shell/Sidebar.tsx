@@ -5,11 +5,15 @@ import { useLocale } from '@/lib/locale-context';
 import styles from './Sidebar.module.css';
 
 const NAV_ITEMS = [
-  { key: 'leave' as const, href: '/leave', icon: '◷', labelKey: 'nav_leave' as const },
-  { key: 'approvals' as const, href: '/approvals', icon: '✓', labelKey: 'nav_approvals' as const },
-  { key: 'people' as const, href: '/people', icon: '◎', labelKey: 'nav_people' as const },
-  { key: 'payroll' as const, href: '/payroll', icon: '◈', labelKey: 'nav_payroll' as const },
-  { key: 'compliance' as const, href: '/compliance', icon: '◻', labelKey: 'nav_compliance' as const },
+  { href: '/leave',        icon: '◷', labelKey: 'nav_leave'       as const },
+  { href: '/approvals',    icon: '✓', labelKey: 'nav_approvals'   as const },
+  { href: '/people',       icon: '◎', labelKey: 'nav_people'      as const },
+  { href: '/letters',      icon: '✉', labelKey: 'nav_letters'     as const },
+  { href: '/payroll',      icon: '◈', labelKey: 'nav_payroll'     as const },
+  { href: '/compliance',   icon: '◻', labelKey: 'nav_compliance'  as const },
+  { href: '/onboarding',   icon: '→', labelKey: 'nav_onboarding'  as const },
+  { href: '/offboarding',  icon: '←', labelKey: 'nav_offboarding' as const },
+  { href: '/reports',      icon: '▦', labelKey: 'nav_reports'     as const },
 ] as const;
 
 export function Sidebar() {
@@ -43,7 +47,12 @@ export function Sidebar() {
       </ul>
 
       <div className={styles.sidebarFooter}>
-        <Link href="/settings" className={styles.navItem} aria-label={t('nav_settings')}>
+        <Link
+          href="/settings"
+          className={styles.navItem}
+          aria-current={pathname.startsWith('/settings') ? 'page' : undefined}
+          data-active={pathname.startsWith('/settings') ? '' : undefined}
+        >
           <span className={styles.navIcon} aria-hidden="true">⚙</span>
           <span className={styles.navLabel}>{t('nav_settings')}</span>
         </Link>

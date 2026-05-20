@@ -11,6 +11,14 @@ const VARIANT_MAP: Record<string, string> = {
   declined: 'danger',
   cancelled: 'neutral',
   draft: 'neutral',
+  paid: 'success',
+  processing_wps: 'warning',
+  calculating: 'warning',
+  issued: 'success',
+  active: 'success',
+  probation: 'warning',
+  terminated: 'danger',
+  on_leave: 'neutral',
 };
 
 interface StatusPillProps {

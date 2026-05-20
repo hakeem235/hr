@@ -112,3 +112,15 @@
   color: var(--color-text-secondary);
   cursor: pointer;
 }
+
+.rowClickable {
+  cursor: pointer;
+}
+.rowClickable:focus-visible td {
+  background-color: var(--color-bg-surface-sunken);
+  outline: none;
+}
+.rowClickable:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: -2px;
+}

@@ -1,0 +1,118 @@
+/**
+ * Seeded KSA benefit plans — config-as-data.
+ * Plans are HR-editable via the API; these are defaults for a new entity.
+ */
+import type { BenefitPlan } from './types.js';
+
+const NOW = '2026-01-01T00:00:00.000Z';
+
+export const DEFAULT_PLANS: BenefitPlan[] = [
+  {
+    id: 'plan_med_basic',
+    entityId: 'ent_default',
+    nameEn: 'Medical Insurance — Basic',
+    nameAr: 'التأمين الطبي — الأساسي',
+    category: 'medical_insurance',
+    cchiProviderCode: 'BUPA_SA_BASIC',
+    medicalTier: 'basic',
+    allowsDependents: true,
+    maxDependents: 4,
+    eligibleNationalities: [],
+    eligibleGrades: [],
+    employeeContributionMinor: 0,
+    employerContributionMinor: 150000,  // SAR 1,500/month
+    currency: 'SAR',
+    isActive: true,
+    createdAt: NOW,
+    version: 1,
+  },
+  {
+    id: 'plan_med_enhanced',
+    entityId: 'ent_default',
+    nameEn: 'Medical Insurance — Enhanced',
+    nameAr: 'التأمين الطبي — المعزز',
+    category: 'medical_insurance',
+    cchiProviderCode: 'BUPA_SA_ENHANCED',
+    medicalTier: 'enhanced',
+    allowsDependents: true,
+    maxDependents: 6,
+    eligibleNationalities: [],
+    eligibleGrades: ['M1', 'M2', 'D1', 'D2'],
+    employeeContributionMinor: 0,
+    employerContributionMinor: 300000,  // SAR 3,000/month
+    currency: 'SAR',
+    isActive: true,
+    createdAt: NOW,
+    version: 1,
+  },
+  {
+    id: 'plan_med_executive',
+    entityId: 'ent_default',
+    nameEn: 'Medical Insurance — Executive',
+    nameAr: 'التأمين الطبي — التنفيذي',
+    category: 'medical_insurance',
+    cchiProviderCode: 'BUPA_SA_EXEC',
+    medicalTier: 'executive',
+    allowsDependents: true,
+    maxDependents: 8,
+    eligibleNationalities: [],
+    eligibleGrades: ['D1', 'D2'],
+    employeeContributionMinor: 0,
+    employerContributionMinor: 600000,  // SAR 6,000/month
+    currency: 'SAR',
+    isActive: true,
+    createdAt: NOW,
+    version: 1,
+  },
+  {
+    id: 'plan_life',
+    entityId: 'ent_default',
+    nameEn: 'Group Life Insurance',
+    nameAr: 'التأمين الجماعي على الحياة',
+    category: 'life_insurance',
+    allowsDependents: false,
+    maxDependents: 0,
+    eligibleNationalities: [],
+    eligibleGrades: [],
+    employeeContributionMinor: 0,
+    employerContributionMinor: 50000,   // SAR 500/month
+    currency: 'SAR',
+    isActive: true,
+    createdAt: NOW,
+    version: 1,
+  },
+  {
+    id: 'plan_air_ticket',
+    entityId: 'ent_default',
+    nameEn: 'Annual Air Ticket Allowance',
+    nameAr: 'بدل تذكرة الطيران السنوية',
+    category: 'air_ticket',
+    allowsDependents: true,
+    maxDependents: 6,
+    eligibleNationalities: [],   // typically expats only — filtered at enrollment
+    eligibleGrades: [],
+    employeeContributionMinor: 0,
+    employerContributionMinor: 0,  // paid as lump sum annually
+    currency: 'SAR',
+    isActive: true,
+    createdAt: NOW,
+    version: 1,
+  },
+  {
+    id: 'plan_mobile',
+    entityId: 'ent_default',
+    nameEn: 'Mobile Allowance',
+    nameAr: 'بدل الجوال',
+    category: 'mobile_allowance',
+    allowsDependents: false,
+    maxDependents: 0,
+    eligibleNationalities: [],
+    eligibleGrades: ['M1', 'M2', 'D1', 'D2', 'L4'],
+    employeeContributionMinor: 0,
+    employerContributionMinor: 20000,  // SAR 200/month
+    currency: 'SAR',
+    isActive: true,
+    createdAt: NOW,
+    version: 1,
+  },
+];

@@ -1,0 +1,179 @@
+.body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-layout-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-layout-sm);
+}
+
+/* ── Field list ── */
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: var(--space-component-md);
+  padding-block: var(--space-component-md);
+  border-block-end: 1px solid var(--color-border-subtle);
+  align-items: baseline;
+}
+.fields .field:last-child { border-block-end: none; }
+
+.field dt {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+.field dd {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.capitalize { text-transform: capitalize; }
+
+/* ── Skeleton loading ── */
+.loadingRows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-md);
+}
+
+.skelRow {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: var(--space-component-md);
+  padding-block: var(--space-component-md);
+  border-block-end: 1px solid var(--color-border-subtle);
+}
+
+.skelLabel,
+.skelValue {
+  display: block;
+  height: 14px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-surface-sunken) 25%,
+    var(--color-bg-canvas) 50%,
+    var(--color-bg-surface-sunken) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+.skelLabel { width: 100%; }
+.skelValue { width: 70%; }
+
+@keyframes shimmer { to { background-position: -200% 0; } }
+
+/* ── Error ── */
+.error {
+  padding: var(--space-component-lg);
+  background-color: var(--color-bg-danger-soft);
+  color: var(--color-text-danger);
+  border: 1px solid var(--color-border-danger);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+/* ── Cancel action ── */
+.actions {
+  padding-block-start: var(--space-layout-sm);
+  border-block-start: 1px solid var(--color-border-subtle);
+}
+
+.cancelBtn {
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  background: transparent;
+  border: 1px solid var(--color-border-danger);
+  border-radius: var(--radius-md);
+  color: var(--color-text-danger);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background-color var(--motion-duration-fast) var(--motion-ease-out);
+}
+.cancelBtn:hover { background-color: var(--color-bg-danger-soft); }
+.cancelBtn:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Confirm panel ── */
+.confirm {
+  padding: var(--space-component-lg);
+  background-color: var(--color-bg-danger-soft);
+  border: 1px solid var(--color-border-danger);
+  border-radius: var(--radius-md);
+}
+
+.confirmText {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-danger);
+  margin: 0 0 var(--space-component-lg);
+}
+
+.confirmActions {
+  display: flex;
+  gap: var(--space-component-md);
+}
+
+.confirmYes {
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  background-color: var(--color-text-danger);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+}
+.confirmYes:disabled { opacity: 0.6; cursor: wait; }
+.confirmYes:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.confirmNo {
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  background: transparent;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+.confirmNo:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Toast ── */
+.toast {
+  position: absolute;
+  inset-block-end: var(--space-layout-sm);
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-bg-success-soft);
+  color: var(--color-text-success);
+  border: 1px solid var(--color-border-success);
+  border-radius: var(--radius-md);
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  white-space: nowrap;
+  pointer-events: none;
+}

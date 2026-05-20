@@ -1,0 +1,319 @@
+/* ── Page layout ── */
+.main {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* ── Left sidebar ── */
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-surface);
+  border-inline-end: 1px solid var(--color-border-subtle);
+  overflow: hidden;
+}
+
+.sidebarHeader {
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-component-lg);
+  border-block-end: 1px solid var(--color-border-subtle);
+  background-color: var(--color-bg-surface-sunken);
+}
+
+.sidebarTitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.defList {
+  flex: 1;
+  overflow-y: auto;
+  padding-block: var(--space-component-sm);
+}
+
+.defItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-component-sm);
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  text-align: start;
+  transition: background-color var(--motion-duration-fast) var(--motion-ease-out),
+              color var(--motion-duration-fast) var(--motion-ease-out);
+}
+.defItem:hover {
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-primary);
+}
+.defItem[aria-pressed="true"] {
+  background-color: var(--color-blue-50);
+  color: var(--color-action-primary);
+  font-weight: var(--font-weight-semibold);
+}
+.defItem:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: -2px;
+}
+
+.defName {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.versionBadge {
+  flex-shrink: 0;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding-block: 1px;
+  padding-inline: var(--space-component-sm);
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-tertiary);
+}
+.defItem[aria-pressed="true"] .versionBadge {
+  background-color: var(--color-blue-100);
+  color: var(--color-blue-700);
+}
+
+.sidebarFooter {
+  padding: var(--space-component-md);
+  border-block-start: 1px solid var(--color-border-subtle);
+}
+
+.newWorkflowBtn {
+  width: 100%;
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-md);
+  border: 1px dashed var(--color-border-default);
+  border-radius: var(--radius-md);
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  cursor: pointer;
+  transition: border-color var(--motion-duration-fast) var(--motion-ease-out),
+              color var(--motion-duration-fast) var(--motion-ease-out);
+}
+.newWorkflowBtn:hover {
+  border-color: var(--color-action-primary);
+  color: var(--color-action-primary);
+  border-style: solid;
+}
+.newWorkflowBtn:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Center canvas area ── */
+.canvasArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* ── Toolbar ── */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-component-md);
+  flex-wrap: wrap;
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  background-color: var(--color-bg-surface);
+  border-block-end: 1px solid var(--color-border-subtle);
+  flex-shrink: 0;
+}
+
+.workflowNameInput {
+  flex: 1;
+  min-width: 160px;
+  max-width: 280px;
+  padding-block: var(--space-component-xs);
+  padding-inline: var(--space-component-sm);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+}
+.workflowNameInput:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 2px rgba(46, 111, 184, 0.12);
+}
+
+.versionBadgeToolbar {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  padding-block: 3px;
+  padding-inline: var(--space-component-sm);
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+}
+
+.toolbarActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-component-sm);
+  margin-inline-start: auto;
+}
+
+/* Add step dropdown */
+.addStepDropdown {
+  position: relative;
+}
+
+.addStepTrigger {
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-md);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg-surface);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: border-color var(--motion-duration-fast) var(--motion-ease-out);
+}
+.addStepTrigger:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+}
+.addStepTrigger:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.addStepMenu {
+  position: absolute;
+  inset-block-start: calc(100% + var(--space-component-xs));
+  inset-inline-end: 0;
+  min-width: 140px;
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  box-shadow: var(--elevation-2);
+  z-index: 100;
+  overflow: hidden;
+  padding-block: var(--space-component-xs);
+}
+
+.addStepMenuItem {
+  width: 100%;
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-md);
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  text-align: start;
+  transition: background-color var(--motion-duration-fast) var(--motion-ease-out);
+}
+.addStepMenuItem:hover {
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-primary);
+}
+.addStepMenuItem:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: -2px;
+}
+
+/* Publish button */
+.publishBtn {
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: background-color var(--motion-duration-fast) var(--motion-ease-out),
+              opacity var(--motion-duration-fast) var(--motion-ease-out);
+  white-space: nowrap;
+}
+.publishBtn:hover:not(:disabled) {
+  background-color: var(--color-action-primary-hover);
+}
+.publishBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.publishBtn:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.saveError {
+  width: 100%;
+  font-size: var(--font-size-xs);
+  color: var(--color-action-destructive);
+  padding-block: var(--space-component-xs);
+}
+
+/* ── Canvas wrapper ── */
+.canvasWrapper {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  padding: var(--space-component-lg);
+}
+
+/* ── Empty canvas state ── */
+.emptyCanvas {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-component-md);
+  padding: var(--space-layout-lg);
+  text-align: center;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  color: var(--color-text-tertiary);
+  margin-block-end: var(--space-component-sm);
+}
+
+.emptyTitle {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
+.emptySub {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+  max-width: 320px;
+}

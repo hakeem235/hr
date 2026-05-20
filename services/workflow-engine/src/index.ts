@@ -94,6 +94,26 @@ class InMemoryEngineRepo implements EngineRepo {
     console.log('[outbox]', event.eventType, event.aggregateId, event.payload);
   }
 
+  async listInstances(filter: { status?: string; limit?: number; cursor?: string } = {}): Promise<{ items: WorkflowInstance[]; steps: Record<string, StepExecution[]>; nextCursor: string | null }> {
+    const limit = filter.limit ?? 50;
+    let all = [...this.instances.values()];
+    if (filter.status) all = all.filter((i) => i.status === filter.status);
+    all.sort((a, b) => (b.createdAt ?? '').localeCompare(a.createdAt ?? ''));
+
+    if (filter.cursor) {
+      const idx = all.findIndex((i) => i.id === filter.cursor);
+      if (idx !== -1) all = all.slice(idx + 1);
+    }
+
+    const page = all.slice(0, limit);
+    const nextCursor = all.length > limit ? page[page.length - 1].id : null;
+    const steps: Record<string, StepExecution[]> = {};
+    for (const inst of page) {
+      steps[inst.id] = this.steps.get(inst.id) ?? [];
+    }
+    return { items: page, steps, nextCursor };
+  }
+
   async listPendingApprovals(actorId?: string, limit = 50): Promise<Array<{
     instance: WorkflowInstance;
     step: StepExecution;
@@ -246,6 +266,79 @@ const actorStore = new InMemoryActorStore();
 // Seed definitions
 await repo.saveDefinition(LEAVE_APPROVAL_DEF);
 await repo.saveDefinition(LETTER_APPROVAL_DEF);
+
+// Seed completed instances for history view
+const seedCompleted = async () => {
+  const d = (offset: number) => new Date(Date.now() + offset).toISOString().replace('Z', '+00:00');
+
+  const i1: WorkflowInstance = {
+    id: 'wf_hist_001', workflowId: 'leave-approval', definitionVersion: 1,
+    status: 'completed', result: 'approved', currentStepIds: [],
+    context: { employeeId: 'emp_018f23', entityId: 'ent_default', leaveType: 'annual', days: 5 },
+    createdAt: d(-3 * 86400_000), updatedAt: d(-2 * 86400_000 - 3600_000),
+    completedAt: d(-2 * 86400_000 - 3600_000),
+  };
+  const s1: StepExecution = {
+    id: 'step_hist_001', instanceId: 'wf_hist_001', stepId: 'manager-review',
+    state: 'done', actorId: 'emp_mgr01', escalationCount: 0,
+    activatedAt: d(-3 * 86400_000 + 1000),
+    decidedAt: d(-2 * 86400_000 - 3600_000),
+    decision: 'approved',
+    slaDueAt: d(-2 * 86400_000),
+  };
+
+  const i2: WorkflowInstance = {
+    id: 'wf_hist_002', workflowId: 'leave-approval', definitionVersion: 1,
+    status: 'completed', result: 'declined', currentStepIds: [],
+    context: { employeeId: 'emp_004a11', entityId: 'ent_default', leaveType: 'annual', days: 10 },
+    createdAt: d(-5 * 86400_000), updatedAt: d(-5 * 86400_000 + 4 * 3600_000),
+    completedAt: d(-5 * 86400_000 + 4 * 3600_000),
+  };
+  const s2: StepExecution = {
+    id: 'step_hist_002', instanceId: 'wf_hist_002', stepId: 'manager-review',
+    state: 'done', actorId: 'emp_mgr01', escalationCount: 0,
+    activatedAt: d(-5 * 86400_000 + 1000),
+    decidedAt: d(-5 * 86400_000 + 4 * 3600_000),
+    decision: 'declined', note: 'Peak period — please reschedule.',
+    slaDueAt: d(-3 * 86400_000),
+  };
+
+  const i3: WorkflowInstance = {
+    id: 'wf_hist_003', workflowId: 'letter-approval', definitionVersion: 1,
+    status: 'completed', result: 'approved', currentStepIds: [],
+    context: { employeeId: 'emp_0c3b77', entityId: 'ent_default', letterType: 'employment_verification' },
+    createdAt: d(-7 * 86400_000), updatedAt: d(-7 * 86400_000 + 2 * 3600_000),
+    completedAt: d(-7 * 86400_000 + 2 * 3600_000),
+  };
+  const s3: StepExecution = {
+    id: 'step_hist_003', instanceId: 'wf_hist_003', stepId: 'hr-review',
+    state: 'done', actorId: 'emp_hr01', escalationCount: 0,
+    activatedAt: d(-7 * 86400_000 + 500),
+    decidedAt: d(-7 * 86400_000 + 2 * 3600_000),
+    decision: 'approved',
+    slaDueAt: d(-6 * 86400_000),
+  };
+
+  const i4: WorkflowInstance = {
+    id: 'wf_hist_004', workflowId: 'leave-approval', definitionVersion: 1,
+    status: 'cancelled', currentStepIds: [],
+    context: { employeeId: 'emp_004a11', entityId: 'ent_default', leaveType: 'emergency', days: 2 },
+    createdAt: d(-10 * 86400_000), updatedAt: d(-9 * 86400_000),
+    completedAt: d(-9 * 86400_000),
+  };
+  const s4: StepExecution = {
+    id: 'step_hist_004', instanceId: 'wf_hist_004', stepId: 'manager-review',
+    state: 'skipped', actorId: 'emp_mgr01', escalationCount: 0,
+    activatedAt: d(-10 * 86400_000 + 500),
+    slaDueAt: d(-8 * 86400_000),
+  };
+
+  await repo.saveInstance(i1); await repo.saveStepExecution(s1);
+  await repo.saveInstance(i2); await repo.saveStepExecution(s2);
+  await repo.saveInstance(i3); await repo.saveStepExecution(s3);
+  await repo.saveInstance(i4); await repo.saveStepExecution(s4);
+};
+await seedCompleted();
 
 const executor = new WorkflowExecutor(
   repo,

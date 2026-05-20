@@ -125,3 +125,21 @@
   padding-block-start: var(--space-component-md);
   border-block-start: 1px solid var(--color-border-subtle);
 }
+
+/* ── Bulk-select checkbox ── */
+.checkboxWrap {
+  display: flex;
+  align-items: center;
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  border-block-end: 1px solid var(--color-border-subtle);
+  cursor: pointer;
+  background-color: var(--color-bg-surface-sunken);
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-action-primary);
+  cursor: pointer;
+}

@@ -1,0 +1,141 @@
+.main {
+  padding: var(--space-layout-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-layout-sm);
+  max-width: 900px;
+}
+
+.caseList { display: flex; flex-direction: column; gap: var(--space-component-md); }
+
+.caseCard {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-component-md) var(--space-layout-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-sm);
+}
+
+.caseCard[data-completed] { opacity: .72; }
+
+.caseHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-component-md);
+}
+
+.caseName {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.caseMeta {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 2px 0 0;
+}
+
+.caseDue {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.caseDue[data-past] {
+  color: var(--color-text-danger);
+  border-color: var(--color-border-danger);
+  background: var(--color-bg-danger-subtle, #fef2f2);
+}
+
+.lastDay {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* Reuse identical track styling from onboarding */
+.track {
+  display: flex;
+  align-items: flex-start;
+  padding-block-start: var(--space-component-sm);
+  overflow-x: auto;
+}
+
+.trackStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  flex: 1;
+  position: relative;
+}
+
+.trackDot {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--color-border-default);
+  background: var(--color-bg-surface);
+  color: var(--color-text-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  z-index: 1;
+  position: relative;
+}
+
+.trackStep[data-done] .trackDot {
+  background: var(--color-action-primary);
+  border-color: var(--color-action-primary);
+  color: white;
+}
+
+.trackStep[data-current] .trackDot {
+  border-color: var(--color-action-primary);
+  color: var(--color-action-primary);
+  box-shadow: 0 0 0 3px var(--color-action-primary-subtle);
+}
+
+.trackLabel {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  max-width: 70px;
+}
+
+.trackStep[data-current] .trackLabel {
+  color: var(--color-action-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.trackLine {
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: 13px;
+  width: 100%;
+  height: 2px;
+  background: var(--color-border-default);
+}
+
+.trackLine[data-done] { background: var(--color-action-primary); }
+
+.empty {
+  padding: var(--space-layout-lg);
+  text-align: center;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.emptyTitle { font-weight: var(--font-weight-medium); color: var(--color-text-primary); margin: 0 0 6px; }
+.emptySub   { font-size: var(--font-size-sm); color: var(--color-text-secondary); margin: 0; }
