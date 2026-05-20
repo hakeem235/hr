@@ -1,9 +1,10 @@
 {
   "pages": {
-    "/page": [
+    "/approvals/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/css/app/approvals/page.css",
+      "static/chunks/app/approvals/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -17,16 +18,65 @@
       "static/css/app/leave/page.css",
       "static/chunks/app/leave/page.js"
     ],
-    "/approvals/page": [
+    "/people/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/approvals/page.css",
-      "static/chunks/app/approvals/page.js"
+      "static/css/app/people/page.css",
+      "static/chunks/app/people/page.js"
     ],
-    "/_not-found/page": [
+    "/letters/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/_not-found/page.js"
+      "static/css/app/letters/page.css",
+      "static/chunks/app/letters/page.js"
+    ],
+    "/people/[id]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/people/[id]/page.css",
+      "static/chunks/app/people/[id]/page.js"
+    ],
+    "/onboarding/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/onboarding/page.css",
+      "static/chunks/app/onboarding/page.js"
+    ],
+    "/payroll/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/payroll/page.css",
+      "static/chunks/app/payroll/page.js"
+    ],
+    "/compliance/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/compliance/page.css",
+      "static/chunks/app/compliance/page.js"
+    ],
+    "/offboarding/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/offboarding/page.css",
+      "static/chunks/app/offboarding/page.js"
+    ],
+    "/reports/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/reports/page.css",
+      "static/chunks/app/reports/page.js"
+    ],
+    "/settings/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/settings/page.css",
+      "static/chunks/app/settings/page.js"
+    ],
+    "/settings/workflows/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/settings/workflows/page.css",
+      "static/chunks/app/settings/workflows/page.js"
     ]
   }
 }

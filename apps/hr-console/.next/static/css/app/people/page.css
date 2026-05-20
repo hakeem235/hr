@@ -1,0 +1,436 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/shell/TopBar.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.TopBar_topBar__0qx31 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-layout-sm);
+  padding-block: var(--space-layout-sm);
+  padding-inline: var(--space-layout-md);
+  background-color: var(--color-bg-surface);
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  flex-shrink: 0;
+}
+
+.TopBar_headingGroup__25vLk {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-xs);
+}
+
+.TopBar_title__QyOda {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-tight);
+  color: var(--color-text-primary);
+}
+
+.TopBar_subtitle__mxLsX {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.TopBar_controls__ptLkk {
+  display: flex;
+  align-items: center;
+  gap: var(--space-component-md);
+  flex-shrink: 0;
+  -webkit-padding-before: var(--space-component-xs);
+          padding-block-start: var(--space-component-xs);
+}
+
+.TopBar_localeToggle__i_TW9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: border-color var(--motion-duration-fast) var(--motion-ease-out),
+              color var(--motion-duration-fast) var(--motion-ease-out);
+}
+
+.TopBar_localeToggle__i_TW9:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/ui/Button.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Button_btn__kzInP {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-component-sm);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: background-color var(--motion-duration-fast) var(--motion-ease-out),
+              border-color var(--motion-duration-fast) var(--motion-ease-out),
+              color var(--motion-duration-fast) var(--motion-ease-out);
+}
+
+.Button_btn__kzInP:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.Button_sm__pnQzd {
+  padding-block: var(--space-component-xs);
+  padding-inline: var(--space-component-md);
+  font-size: var(--font-size-xs);
+  height: 28px;
+}
+.Button_md__ktIWF {
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  font-size: var(--font-size-sm);
+  height: 36px;
+}
+.Button_lg__s7W56 {
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-5);
+  font-size: var(--font-size-md);
+  height: 44px;
+}
+
+/* Variants */
+.Button_primary__6_Dls {
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-action-primary);
+}
+.Button_primary__6_Dls:hover:not(:disabled) {
+  background-color: var(--color-action-primary-hover);
+  border-color: var(--color-action-primary-hover);
+}
+.Button_primary__6_Dls:active:not(:disabled) {
+  background-color: var(--color-action-primary-active);
+}
+
+.Button_secondary__uuOdH {
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  border-color: var(--color-border-default);
+}
+.Button_secondary__uuOdH:hover:not(:disabled) {
+  background-color: var(--color-bg-surface-sunken);
+  border-color: var(--color-border-strong);
+}
+
+.Button_ghost__gZqlA {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border-color: transparent;
+}
+.Button_ghost__gZqlA:hover:not(:disabled) {
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-primary);
+}
+
+.Button_destructive__9VB0j {
+  background-color: var(--color-bg-danger-soft);
+  color: var(--color-text-danger);
+  border-color: var(--color-border-danger);
+}
+.Button_destructive__9VB0j:hover:not(:disabled) {
+  background-color: var(--color-red-50);
+}
+
+/* Spinner */
+.Button_spinner__DYdB3 {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-inline-end-color: transparent;
+  border-radius: var(--radius-full);
+  animation: Button_spin__ESAWP 0.6s linear infinite;
+}
+@keyframes Button_spin__ESAWP { to { transform: rotate(360deg); } }
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/ui/StatusPill.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.StatusPill_pill__Pkn1Y {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 2px;
+  padding-inline: var(--space-component-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.StatusPill_warning__U2tGS {
+  background-color: var(--color-bg-warning-soft);
+  color: var(--color-text-warning);
+  border-color: var(--color-orange-500);
+}
+.StatusPill_success__rFQmV {
+  background-color: var(--color-bg-success-soft);
+  color: var(--color-text-success);
+  border-color: var(--color-green-500);
+}
+.StatusPill_danger__fq8cm {
+  background-color: var(--color-bg-danger-soft);
+  color: var(--color-text-danger);
+  border-color: var(--color-red-500);
+}
+.StatusPill_neutral__MLppS {
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-tertiary);
+  border-color: var(--color-border-default);
+}
+
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/people/PeopleTable.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.PeopleTable_tableWrap__1588Y {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.PeopleTable_table__z68h3 {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.PeopleTable_th__AEkNG {
+  padding: var(--space-component-sm) var(--space-component-md);
+  text-align: start;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  background: var(--color-bg-subtle);
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  white-space: nowrap;
+}
+
+.PeopleTable_td__2M5wI {
+  padding: var(--space-component-sm) var(--space-component-md);
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  color: var(--color-text-primary);
+  vertical-align: middle;
+}
+
+.PeopleTable_row___o5YJ:last-child .PeopleTable_td__2M5wI { -webkit-border-after: none; border-block-end: none; }
+
+.PeopleTable_row___o5YJ:hover .PeopleTable_td__2M5wI { background: var(--color-bg-hover); }
+
+.PeopleTable_nameLink__kNfHP {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-component-sm);
+  color: var(--color-action-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+}
+
+.PeopleTable_nameLink__kNfHP:hover { text-decoration: underline; }
+
+.PeopleTable_nameLink__kNfHP:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.PeopleTable_avatar__E6S78 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background: var(--color-action-primary-subtle);
+  color: var(--color-action-primary);
+  font-size: 11px;
+  font-weight: var(--font-weight-semibold);
+  flex-shrink: 0;
+}
+
+/* skeleton */
+.PeopleTable_skeletonRow__jghPi .PeopleTable_td__2M5wI { -webkit-border-after: 1px solid var(--color-border-subtle); border-block-end: 1px solid var(--color-border-subtle); }
+
+.PeopleTable_skeleton__nzIVU {
+  display: block;
+  height: 14px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(90deg, var(--color-bg-subtle) 25%, var(--color-bg-hover) 50%, var(--color-bg-subtle) 75%);
+  background-size: 200% 100%;
+  animation: PeopleTable_shimmer__c8L4x 1.4s infinite;
+}
+
+.PeopleTable_skeletonRow__jghPi:nth-child(odd) .PeopleTable_skeleton__nzIVU { width: 80%; }
+.PeopleTable_skeletonRow__jghPi:nth-child(even) .PeopleTable_skeleton__nzIVU { width: 60%; }
+
+@keyframes PeopleTable_shimmer__c8L4x {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* empty state */
+.PeopleTable_emptyCell__aNpxG { text-align: center; padding: var(--space-layout-lg); border: none; }
+
+.PeopleTable_empty__Pui_h { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+
+.PeopleTable_emptyTitle__yknX1 { font-weight: var(--font-weight-medium); color: var(--color-text-primary); }
+
+.PeopleTable_emptySub__2HJFf { font-size: var(--font-size-sm); color: var(--color-text-secondary); }
+
+/* error */
+.PeopleTable_error__xmeUq {
+  padding: var(--space-component-md);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-danger-subtle);
+  color: var(--color-text-danger);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-component-md);
+}
+
+.PeopleTable_retryBtn__Knc6M {
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-danger);
+  background: transparent;
+  color: var(--color-text-danger);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.PeopleTable_retryBtn__Knc6M:hover { background: var(--color-bg-danger); }
+
+.PeopleTable_retryBtn__Knc6M:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/people/page.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_main__FdClU {
+  padding: var(--space-layout-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-layout-sm);
+  max-width: 1200px;
+}
+
+.page_controls__cmJGz {
+  display: flex;
+  align-items: center;
+  gap: var(--space-component-md);
+  flex-wrap: wrap;
+}
+
+/* Search */
+.page_searchWrap__ZdbtR {
+  position: relative;
+  flex: 1 1;
+  min-width: 220px;
+}
+
+.page_searchIcon___tTSR {
+  position: absolute;
+  inset-inline-start: 10px;
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-tertiary);
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.page_searchInput__C1Hu1 {
+  width: 100%;
+  padding: 7px var(--space-component-md) 7px 32px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+}
+
+.page_searchInput__C1Hu1::placeholder { color: var(--color-text-tertiary); }
+
+.page_searchInput__C1Hu1:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(46, 111, 184, .12);
+}
+
+/* Filter bar */
+.page_filterBar__pLPNG {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.page_filterBtn__wWieM {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px var(--space-component-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-default);
+  background: var(--color-bg-surface);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+  cursor: pointer;
+  transition: background var(--motion-duration-fast) var(--motion-ease-out);
+}
+
+.page_filterBtn__wWieM:hover { background: var(--color-bg-hover); }
+
+.page_filterBtn__wWieM[aria-pressed='true'] {
+  background: var(--color-action-primary-subtle);
+  color: var(--color-action-primary);
+  border-color: var(--color-action-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.page_filterBtn__wWieM:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.page_filterCount__YU2e9 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  padding: 0 5px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-subtle);
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+}
+
+.page_filterBtn__wWieM[aria-pressed='true'] .page_filterCount__YU2e9 {
+  background: var(--color-action-primary);
+  color: white;
+}
+

@@ -296,6 +296,183 @@
           border-block-start: 1px solid var(--color-border-subtle);
 }
 
+/* ── Bulk-select checkbox ── */
+.ApprovalCard_checkboxWrap__0305m {
+  display: flex;
+  align-items: center;
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  cursor: pointer;
+  background-color: var(--color-bg-surface-sunken);
+}
+
+.ApprovalCard_checkbox__xNyJw {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-action-primary);
+  cursor: pointer;
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/ui/StatusPill.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.StatusPill_pill__Pkn1Y {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 2px;
+  padding-inline: var(--space-component-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.StatusPill_warning__U2tGS {
+  background-color: var(--color-bg-warning-soft);
+  color: var(--color-text-warning);
+  border-color: var(--color-orange-500);
+}
+.StatusPill_success__rFQmV {
+  background-color: var(--color-bg-success-soft);
+  color: var(--color-text-success);
+  border-color: var(--color-green-500);
+}
+.StatusPill_danger__fq8cm {
+  background-color: var(--color-bg-danger-soft);
+  color: var(--color-text-danger);
+  border-color: var(--color-red-500);
+}
+.StatusPill_neutral__MLppS {
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-tertiary);
+  border-color: var(--color-border-default);
+}
+
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/approvals/ApprovalHistoryTable.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.ApprovalHistoryTable_tableWrap__q5NJ8 {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+  background-color: var(--color-bg-surface);
+  box-shadow: var(--elevation-1);
+}
+
+.ApprovalHistoryTable_table__rwNMN {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.ApprovalHistoryTable_table__rwNMN thead tr {
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  background-color: var(--color-bg-surface-sunken);
+}
+
+.ApprovalHistoryTable_table__rwNMN th {
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-component-lg);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  text-align: start;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ApprovalHistoryTable_table__rwNMN td {
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-component-lg);
+  color: var(--color-text-primary);
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  vertical-align: middle;
+}
+
+.ApprovalHistoryTable_table__rwNMN tbody tr:last-child td { -webkit-border-after: none; border-block-end: none; }
+.ApprovalHistoryTable_table__rwNMN tbody tr:hover td { background-color: var(--color-bg-surface-sunken); }
+
+/* ── Module pill ── */
+.ApprovalHistoryTable_modulePill__rF6RB {
+  display: inline-block;
+  padding-block: 2px;
+  padding-inline: var(--space-component-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.ApprovalHistoryTable_modulePill__rF6RB[data-module="leave"]   { background: var(--color-blue-50);   color: var(--color-blue-600); }
+.ApprovalHistoryTable_modulePill__rF6RB[data-module="letters"] { background: #fff3e0;                color: var(--color-orange-500); }
+.ApprovalHistoryTable_modulePill__rF6RB[data-module="payroll"] { background: #e8f5e9;                color: var(--color-green-500); }
+.ApprovalHistoryTable_modulePill__rF6RB[data-module="benefits"]{ background: var(--color-bg-subtle);  color: var(--color-text-secondary); }
+
+.ApprovalHistoryTable_titleCell__lA2aj {
+  max-width: 240px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+
+.ApprovalHistoryTable_note__jObpK {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  font-style: italic;
+  margin: 4px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.ApprovalHistoryTable_dim__r1FOm { color: var(--color-text-tertiary); }
+
+/* ── Skeleton ── */
+.ApprovalHistoryTable_skel__BAieP {
+  display: block;
+  height: 14px;
+  width: 80%;
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-surface-sunken) 25%,
+    var(--color-bg-canvas) 50%,
+    var(--color-bg-surface-sunken) 75%
+  );
+  background-size: 200% 100%;
+  animation: ApprovalHistoryTable_shimmer__Wa_oR 1.5s infinite;
+  border-radius: var(--radius-sm);
+}
+@keyframes ApprovalHistoryTable_shimmer__Wa_oR { to { background-position: -200% 0; } }
+
+/* ── Empty state ── */
+.ApprovalHistoryTable_empty__xJN_Y {
+  padding-block: var(--space-8);
+  padding-inline: var(--space-layout-md);
+  text-align: center;
+  background-color: var(--color-bg-surface);
+  border-radius: var(--radius-lg);
+  border: 1px dashed var(--color-border-default);
+}
+.ApprovalHistoryTable_emptyTitle__UxVP_ {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-secondary);
+  -webkit-margin-after: var(--space-component-sm);
+          margin-block-end: var(--space-component-sm);
+}
+.ApprovalHistoryTable_emptySub__Yacc6 {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-tertiary);
+}
+
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/approvals/page.module.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
@@ -413,5 +590,120 @@
   clip: rect(0,0,0,0);
   white-space: nowrap;
   border-width: 0;
+}
+
+/* ── View tabs: Pending / History ── */
+.page_viewTabs__Sksao {
+  display: flex;
+  gap: 0;
+  -webkit-border-after: 2px solid var(--color-border-subtle);
+          border-block-end: 2px solid var(--color-border-subtle);
+}
+
+.page_viewTab__eDkud {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-component-sm);
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-component-lg);
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  -webkit-border-after: 2px solid transparent;
+          border-block-end: 2px solid transparent;
+  -webkit-margin-after: -2px;
+          margin-block-end: -2px;
+  transition: color var(--motion-duration-fast) var(--motion-ease-out),
+              border-color var(--motion-duration-fast) var(--motion-ease-out);
+}
+.page_viewTab__eDkud:hover { color: var(--color-text-primary); }
+.page_viewTab__eDkud[aria-selected="true"] {
+  color: var(--color-action-primary);
+  border-block-end-color: var(--color-action-primary);
+  font-weight: var(--font-weight-semibold);
+}
+.page_viewTab__eDkud:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.page_viewCount__LoOgh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding-inline: var(--space-component-xs);
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+.page_viewTab__eDkud[aria-selected="true"] .page_viewCount__LoOgh {
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+}
+
+.page_filterRow__xJ9hA {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ── Bulk action bar ── */
+.page_bulkBar__AieIj {
+  display: flex;
+  align-items: center;
+  gap: var(--space-component-lg);
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  background-color: var(--color-bg-surface-sunken);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-md);
+  min-height: 40px;
+}
+
+.page_selectAllLabel__rIRr_ {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-component-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.page_bulkCheckbox__PXrn9 {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-action-primary);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.page_bulkApproveBtn__QTzJm {
+  padding-block: var(--space-component-xs);
+  padding-inline: var(--space-component-lg);
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: opacity var(--motion-duration-fast) var(--motion-ease-out);
+}
+.page_bulkApproveBtn__QTzJm:disabled { opacity: 0.6; cursor: wait; }
+.page_bulkApproveBtn__QTzJm:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
 }
 

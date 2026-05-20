@@ -180,7 +180,6 @@ Last updated: 2026-05-20
 - [x] In-memory repo with cursor pagination
 - [x] **34 passing tests** — SagaRunner happy path, retries, compensation, onboarding/offboarding structure, event routing, repo
 - [ ] Real PostgreSQL persistence
-- [x] Visual workflow builder — `/settings/workflows`, SVG canvas, full step editor, publishes versioned JSON to workflow engine
 
 ---
 
@@ -287,4 +286,4 @@ React Native · iOS + Android
 | `/services/payroll` | 29 | all passing |
 | `/services/integrations` | 28 | all passing |
 | `/services/workflow-sagas` | 34 | all passing |
-| `/apps/hr-console` | — | 14 routes, build passing |
+| `/apps/hr-console` | — | 13 routes, build passing |

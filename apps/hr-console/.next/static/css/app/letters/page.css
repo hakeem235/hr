@@ -1,0 +1,455 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/shell/TopBar.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.TopBar_topBar__0qx31 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-layout-sm);
+  padding-block: var(--space-layout-sm);
+  padding-inline: var(--space-layout-md);
+  background-color: var(--color-bg-surface);
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  flex-shrink: 0;
+}
+
+.TopBar_headingGroup__25vLk {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-xs);
+}
+
+.TopBar_title__QyOda {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-tight);
+  color: var(--color-text-primary);
+}
+
+.TopBar_subtitle__mxLsX {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.TopBar_controls__ptLkk {
+  display: flex;
+  align-items: center;
+  gap: var(--space-component-md);
+  flex-shrink: 0;
+  -webkit-padding-before: var(--space-component-xs);
+          padding-block-start: var(--space-component-xs);
+}
+
+.TopBar_localeToggle__i_TW9 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+  transition: border-color var(--motion-duration-fast) var(--motion-ease-out),
+              color var(--motion-duration-fast) var(--motion-ease-out);
+}
+
+.TopBar_localeToggle__i_TW9:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-text-primary);
+}
+
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/ui/Button.module.css ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.Button_btn__kzInP {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-component-sm);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  transition: background-color var(--motion-duration-fast) var(--motion-ease-out),
+              border-color var(--motion-duration-fast) var(--motion-ease-out),
+              color var(--motion-duration-fast) var(--motion-ease-out);
+}
+
+.Button_btn__kzInP:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.Button_sm__pnQzd {
+  padding-block: var(--space-component-xs);
+  padding-inline: var(--space-component-md);
+  font-size: var(--font-size-xs);
+  height: 28px;
+}
+.Button_md__ktIWF {
+  padding-block: var(--space-component-sm);
+  padding-inline: var(--space-component-lg);
+  font-size: var(--font-size-sm);
+  height: 36px;
+}
+.Button_lg__s7W56 {
+  padding-block: var(--space-component-md);
+  padding-inline: var(--space-5);
+  font-size: var(--font-size-md);
+  height: 44px;
+}
+
+/* Variants */
+.Button_primary__6_Dls {
+  background-color: var(--color-action-primary);
+  color: var(--color-text-inverse);
+  border-color: var(--color-action-primary);
+}
+.Button_primary__6_Dls:hover:not(:disabled) {
+  background-color: var(--color-action-primary-hover);
+  border-color: var(--color-action-primary-hover);
+}
+.Button_primary__6_Dls:active:not(:disabled) {
+  background-color: var(--color-action-primary-active);
+}
+
+.Button_secondary__uuOdH {
+  background-color: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  border-color: var(--color-border-default);
+}
+.Button_secondary__uuOdH:hover:not(:disabled) {
+  background-color: var(--color-bg-surface-sunken);
+  border-color: var(--color-border-strong);
+}
+
+.Button_ghost__gZqlA {
+  background-color: transparent;
+  color: var(--color-text-secondary);
+  border-color: transparent;
+}
+.Button_ghost__gZqlA:hover:not(:disabled) {
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-primary);
+}
+
+.Button_destructive__9VB0j {
+  background-color: var(--color-bg-danger-soft);
+  color: var(--color-text-danger);
+  border-color: var(--color-border-danger);
+}
+.Button_destructive__9VB0j:hover:not(:disabled) {
+  background-color: var(--color-red-50);
+}
+
+/* Spinner */
+.Button_spinner__DYdB3 {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-inline-end-color: transparent;
+  border-radius: var(--radius-full);
+  animation: Button_spin__ESAWP 0.6s linear infinite;
+}
+@keyframes Button_spin__ESAWP { to { transform: rotate(360deg); } }
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/ui/StatusPill.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.StatusPill_pill__Pkn1Y {
+  display: inline-flex;
+  align-items: center;
+  padding-block: 2px;
+  padding-inline: var(--space-component-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  white-space: nowrap;
+  border: 1px solid transparent;
+}
+
+.StatusPill_warning__U2tGS {
+  background-color: var(--color-bg-warning-soft);
+  color: var(--color-text-warning);
+  border-color: var(--color-orange-500);
+}
+.StatusPill_success__rFQmV {
+  background-color: var(--color-bg-success-soft);
+  color: var(--color-text-success);
+  border-color: var(--color-green-500);
+}
+.StatusPill_danger__fq8cm {
+  background-color: var(--color-bg-danger-soft);
+  color: var(--color-text-danger);
+  border-color: var(--color-red-500);
+}
+.StatusPill_neutral__MLppS {
+  background-color: var(--color-bg-surface-sunken);
+  color: var(--color-text-tertiary);
+  border-color: var(--color-border-default);
+}
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./components/letters/NewLetterDrawer.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.NewLetterDrawer_dialog__2oMuC {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.NewLetterDrawer_dialog__2oMuC::-webkit-backdrop {
+  background: rgba(0, 0, 0, .45);
+}
+
+.NewLetterDrawer_dialog__2oMuC::backdrop {
+  background: rgba(0, 0, 0, .45);
+}
+
+.NewLetterDrawer_drawer__UyiTt {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-end: 0;
+  width: min(440px, 100%);
+  background: var(--color-bg-surface);
+  -webkit-border-start: 1px solid var(--color-border-subtle);
+          border-inline-start: 1px solid var(--color-border-subtle);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  animation: NewLetterDrawer_slideIn__AWdWb var(--motion-duration-moderate) var(--motion-ease-out);
+}
+
+[dir='rtl'] .NewLetterDrawer_drawer__UyiTt {
+  inset-inline-end: auto;
+  inset-inline-start: 0;
+  -webkit-border-start: none;
+          border-inline-start: none;
+  -webkit-border-end: 1px solid var(--color-border-subtle);
+          border-inline-end: 1px solid var(--color-border-subtle);
+}
+
+@keyframes NewLetterDrawer_slideIn__AWdWb {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+[dir='rtl'] .NewLetterDrawer_drawer__UyiTt {
+  animation-name: NewLetterDrawer_slideInRtl__NHF17;
+}
+
+@keyframes NewLetterDrawer_slideInRtl__NHF17 {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .NewLetterDrawer_drawer__UyiTt { animation: none; }
+}
+
+.NewLetterDrawer_drawerHeader__LGr2W {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-component-md) var(--space-layout-sm);
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  flex-shrink: 0;
+}
+
+.NewLetterDrawer_drawerTitle__tYULX {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-family-display);
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.NewLetterDrawer_closeBtn__SGvF7 {
+  padding: 4px 8px;
+  border: none;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-md);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  line-height: 1;
+}
+
+.NewLetterDrawer_closeBtn__SGvF7:hover { background: var(--color-bg-hover); color: var(--color-text-primary); }
+
+.NewLetterDrawer_closeBtn__SGvF7:focus-visible {
+  outline: 2px solid var(--color-border-focus);
+  outline-offset: 2px;
+}
+
+.NewLetterDrawer_errorBanner__zRinb {
+  padding: var(--space-component-sm) var(--space-layout-sm);
+  background: var(--color-bg-danger-subtle);
+  color: var(--color-text-danger);
+  font-size: var(--font-size-sm);
+  -webkit-border-after: 1px solid var(--color-border-danger);
+          border-block-end: 1px solid var(--color-border-danger);
+}
+
+.NewLetterDrawer_form__ERrft {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-component-md);
+  padding: var(--space-layout-sm);
+  flex: 1 1;
+}
+
+.NewLetterDrawer_field__BbfCP { display: flex; flex-direction: column; gap: 6px; }
+
+.NewLetterDrawer_label__kY2bW {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-primary);
+}
+
+.NewLetterDrawer_input__ATwqv {
+  padding: 8px var(--space-component-md);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-surface);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+}
+
+.NewLetterDrawer_input__ATwqv:focus {
+  outline: none;
+  border-color: var(--color-border-focus);
+  box-shadow: 0 0 0 3px rgba(46, 111, 184, .12);
+}
+
+.NewLetterDrawer_actions__Af4S7 {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-component-sm);
+  -webkit-padding-before: var(--space-component-sm);
+          padding-block-start: var(--space-component-sm);
+  -webkit-margin-before: auto;
+          margin-block-start: auto;
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!../../node_modules/.pnpm/next@14.2.5_@babel+core@7.29.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/letters/page.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_main__009LO {
+  padding: var(--space-layout-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-layout-sm);
+  max-width: 1100px;
+}
+
+.page_filterBar__FIOai {
+  display: flex;
+  gap: 4px;
+}
+
+.page_filterBtn__iQQv_ {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px var(--space-component-md);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-default);
+  background: var(--color-bg-surface);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+  cursor: pointer;
+  transition: background var(--motion-duration-fast) var(--motion-ease-out);
+}
+
+.page_filterBtn__iQQv_:hover { background: var(--color-bg-hover); }
+
+.page_filterBtn__iQQv_[aria-pressed='true'] {
+  background: var(--color-action-primary-subtle);
+  color: var(--color-action-primary);
+  border-color: var(--color-action-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.page_filterBtn__iQQv_:focus-visible { outline: 2px solid var(--color-border-focus); outline-offset: 2px; }
+
+.page_filterCount__549MO {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  padding: 0 5px;
+  height: 18px;
+  border-radius: var(--radius-full);
+  background: var(--color-bg-subtle);
+  color: var(--color-text-secondary);
+  font-size: 11px;
+  font-weight: var(--font-weight-medium);
+}
+
+.page_filterBtn__iQQv_[aria-pressed='true'] .page_filterCount__549MO { background: var(--color-action-primary); color: white; }
+
+.page_tableWrap__LRGig {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-subtle);
+}
+
+.page_table__6AAr0 { width: 100%; border-collapse: collapse; font-size: var(--font-size-sm); }
+
+.page_th__xJ6Ny {
+  padding: var(--space-component-sm) var(--space-component-md);
+  text-align: start;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  background: var(--color-bg-subtle);
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  white-space: nowrap;
+}
+
+.page_td__3S_bS {
+  padding: var(--space-component-sm) var(--space-component-md);
+  -webkit-border-after: 1px solid var(--color-border-subtle);
+          border-block-end: 1px solid var(--color-border-subtle);
+  color: var(--color-text-primary);
+  vertical-align: middle;
+}
+
+.page_skeleton___aq87 {
+  display: block;
+  height: 14px;
+  width: 70%;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(90deg, var(--color-bg-subtle) 25%, var(--color-bg-hover) 50%, var(--color-bg-subtle) 75%);
+  background-size: 200% 100%;
+  animation: page_shimmer__lo1FX 1.4s infinite;
+}
+
+@keyframes page_shimmer__lo1FX {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.page_emptyCell__AnxPM { text-align: center; padding: var(--space-layout-lg); border: none; }
+.page_emptyTitle__XMdc_ { font-weight: var(--font-weight-medium); color: var(--color-text-primary); margin: 0 0 6px; }
+.page_emptySub__Z84D2 { font-size: var(--font-size-sm); color: var(--color-text-secondary); margin: 0; }
+
