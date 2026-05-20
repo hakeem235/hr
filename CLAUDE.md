@@ -76,7 +76,7 @@ differ per repo.
 | Employee + Manager apps | React Native | one codebase, iOS + Android; web fallback acceptable |
 | HR Console + Admin | Next.js (App Router) | desktop-optimized, keyboard-first |
 | Backend services | Node.js (primary), Go (perf-critical paths) | per-service, not a monolith |
-| Datastore | PostgreSQL | one employee master in `/services/people` |
+| Datastore | MongoDB (NoSQL) | one employee master in `/services/people` |
 | Event bus | Kafka or NATS | services subscribe; engine stays ignorant of consumers |
 | Approval workflows | custom config-driven state machine | HR-editable JSON, no deploy needed |
 | Long-running sagas | Temporal | onboarding/offboarding only — durable retries + compensation |

@@ -1,6 +1,7 @@
 import { createLetterRequest, cancelLetterRequest, markLetterIssued, } from '../domain/letter.js';
 import { getLetterTypes, getLetterPolicy } from '../domain/letter-types.js';
 import { LetterError, statusFor } from '../domain/errors.js';
+import { renderLetter } from '../renderer/index.js';
 function correlationId(req) {
     return req.headers['x-correlation-id'] ?? crypto.randomUUID();
 }
@@ -128,5 +129,97 @@ export function registerLetterRoutes(app, deps) {
             }
             throw err;
         }
+    });
+    /* ── Download generated PDF ────────────────────────────────── */
+    app.get('/api/v1/letter-requests/:id/document', async (req, reply) => {
+        const corrId = correlationId(req);
+        const { id } = req.params;
+        const rec = await repo.findById(id);
+        if (!rec) {
+            return reply.status(404).send({ error: { code: 'NOT_FOUND', message: `Letter request ${id} not found` } });
+        }
+        const DOWNLOADABLE = ['approved', 'generating', 'issued'];
+        if (!DOWNLOADABLE.includes(rec.status)) {
+            return reply.status(422).send({
+                error: {
+                    code: 'INVALID_STATE',
+                    message: `Letter must be approved before it can be downloaded (current status: '${rec.status}')`,
+                    details: { current: rec.status, downloadable: DOWNLOADABLE },
+                },
+            });
+        }
+        // Transition approved → generating so the caller can track progress
+        let current = rec;
+        if (current.status === 'approved') {
+            try {
+                current = await repo.updateStatus(id, 'generating', current.version, {
+                    eventId: `evt_${Date.now()}`,
+                    eventType: 'LetterGenerating',
+                    entityId: current.entityId,
+                    correlationId: corrId,
+                    occurredAt: new Date().toISOString(),
+                    aggregateType: 'letter_request',
+                    aggregateId: id,
+                    payload: { requestId: id },
+                });
+            }
+            catch {
+                // Race condition — another request is already generating; continue
+                current = (await repo.findById(id)) ?? current;
+            }
+        }
+        // Fetch employee + entity data (HTTP → seeded fallback)
+        const employee = await deps.people.getEmployee(current.employeeId);
+        if (!employee) {
+            return reply.status(422).send({
+                error: { code: 'INELIGIBLE', message: `Employee data not found for ${current.employeeId}` },
+            });
+        }
+        const entity = await deps.people.getEntity(current.entityId);
+        if (!entity) {
+            return reply.status(422).send({
+                error: { code: 'INELIGIBLE', message: `Entity data not found for ${current.entityId}` },
+            });
+        }
+        // Render PDF
+        let pdfBuffer;
+        try {
+            pdfBuffer = await renderLetter({
+                letter: current,
+                employee,
+                entity,
+                arabicFontPath: deps.arabicFontPath,
+            });
+        }
+        catch (err) {
+            const msg = err instanceof Error ? err.message : String(err);
+            req.log.error({ err }, 'PDF render failed');
+            return reply.status(500).send({ error: { code: 'UNKNOWN', message: `PDF generation failed: ${msg}` } });
+        }
+        // Mark issued once generated (if not already)
+        if (current.status === 'generating') {
+            const docId = `doc_${current.id}_${Date.now()}`;
+            try {
+                await repo.updateStatus(id, 'issued', current.version, {
+                    eventId: `evt_${Date.now()}`,
+                    eventType: 'LetterIssued',
+                    entityId: current.entityId,
+                    correlationId: corrId,
+                    occurredAt: new Date().toISOString(),
+                    aggregateType: 'letter_request',
+                    aggregateId: id,
+                    payload: { requestId: id, documentId: docId },
+                }, { documentId: docId });
+            }
+            catch {
+                // Not fatal — PDF was generated; status update race is acceptable
+            }
+        }
+        const filename = `letter_${id}_${current.letterTypeId}.pdf`;
+        return reply
+            .header('Content-Type', 'application/pdf')
+            .header('Content-Disposition', `attachment; filename="${filename}"`)
+            .header('Content-Length', String(pdfBuffer.length))
+            .send(pdfBuffer);
     });
 }

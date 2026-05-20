@@ -2,6 +2,7 @@ import Fastify from 'fastify';
 import type { LetterRepo, LetterRecord, LetterStatus, DomainEvent, ListFilter } from './domain/letter.js';
 import { registerLetterRoutes } from './routes/letter-routes.js';
 import { createWorkflowClient } from './wf-client.js';
+import { createPeopleClient, createFallbackPeopleClient } from './people-client.js';
 
 // ─── In-Memory Repo ───────────────────────────────────────────────────────────
 
@@ -135,7 +136,11 @@ app.get('/', async () => ({
   ],
 }));
 
-registerLetterRoutes(app, { repo, wf });
+const PEOPLE_SERVICE_URL = process.env.PEOPLE_SERVICE_URL ?? 'http://localhost:3003';
+const ARABIC_FONT_PATH = process.env.ARABIC_FONT_PATH;
+const people = createFallbackPeopleClient(createPeopleClient(PEOPLE_SERVICE_URL));
+
+registerLetterRoutes(app, { repo, wf, people, arabicFontPath: ARABIC_FONT_PATH });
 
 const port = Number(process.env.PORT ?? 3004);
 app.listen({ port, host: '0.0.0.0' }, (err) => {

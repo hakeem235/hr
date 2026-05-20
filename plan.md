@@ -54,7 +54,7 @@ Last updated: 2026-05-20
 - [x] In-memory store with sample data (5 seeded requests)
 - [x] ETag + If-Match on mutable resources
 - [x] **22 passing tests** — working-days, create, cancel, types, policies
-- [ ] Real PostgreSQL adapter
+- [ ] Real MongoDB adapter
 
 ---
 
@@ -75,7 +75,7 @@ Last updated: 2026-05-20
 - [x] In-memory repo + org chart (8 seeded employees)
 - [x] **36 passing tests** — executor, SLA, context evaluator
 - [x] SLA breach scheduler (60s poll, KSA business-hours check, escalation chain)
-- [ ] Real PostgreSQL persistence
+- [ ] Real MongoDB persistence
 - [x] Visual workflow builder — `/settings/workflows`, SVG canvas, full step editor, publishes versioned JSON to workflow engine
 - [x] Temporal sagas — built as `/services/workflow-sagas` (port 3009)
 
@@ -92,7 +92,7 @@ Last updated: 2026-05-20
 - [x] Cursor pagination on persons, employees, documents
 - [x] Seeded data matching workflow engine + leave service employee IDs (10 employees, 2 departments, 1 entity)
 - [x] **24 passing tests**
-- [ ] Real PostgreSQL adapter
+- [ ] Real MongoDB adapter
 
 ---
 
@@ -102,9 +102,14 @@ Last updated: 2026-05-20
 - [x] Workflow client integration
 - [x] ETag + If-Match, outbox pattern
 - [x] Seeded data: 3 requests
-- [x] **19 passing tests**
-- [ ] Real PostgreSQL adapter
-- [ ] Letter template renderer (bilingual PDF generation)
+- [x] Letter template renderer (bilingual PDF generation)
+  - [x] 7 KSA letter templates en + ar — `templates.ts` (salary certificate, employment certificate, experience letter, NOC, bank letter, embassy letter, salary transfer)
+  - [x] PDFKit layout engine — A4, brand-teal letterhead, ref/date line, bilingual stacked layout, RTL right-align for Arabic
+  - [x] Arabic font via `ARABIC_FONT_PATH` env var (Amiri/NotoNaskhArabic); graceful fallback to Helvetica
+  - [x] `GET /api/v1/letter-requests/:id/document` — renders PDF on demand, transitions `approved → generating → issued`
+  - [x] `PeopleClient` — HTTP fetch from people service + seeded employee fallback
+- [x] **31 passing tests** — domain (19) + renderer/PDF (12)
+- [ ] Real MongoDB adapter
 
 ---
 
@@ -129,7 +134,7 @@ Last updated: 2026-05-20
 - [x] EOSB calculator — KSA Labour Law Art. 84; all amounts in halalas (integer-safe)
 - [x] ETag + If-Match, outbox pattern, idempotency, cursor pagination
 - [x] **27 passing tests**
-- [ ] Real PostgreSQL adapter
+- [ ] Real MongoDB adapter
 
 ---
 
@@ -144,7 +149,7 @@ Last updated: 2026-05-20
 - [x] Idempotency-Key, ETag + If-Match, outbox pattern, cursor pagination
 - [x] Seeded: 4 paid runs (Jan–Apr 2026) + 1 draft (May 2026)
 - [x] **29 passing tests**
-- [ ] Real PostgreSQL adapter
+- [ ] Real MongoDB adapter
 - [ ] Payslip PDF generation
 - [ ] Real Mudad/WPS API integration (in `/services/integrations`)
 
@@ -164,7 +169,7 @@ Last updated: 2026-05-20
 - [x] **28 passing tests** — GOSI rates/integer safety, enrollment/exit/recalc, Mudad WPS validation, Qiwa/Muqeem/CCHI, event routing + idempotency
 - [ ] Real portal API clients (GOSI, Mudad, Qiwa, Muqeem, CCHI)
 - [ ] Async polling / webhook confirmation (currently stub-confirms synchronously)
-- [ ] Real PostgreSQL adapter
+- [ ] Real MongoDB adapter
 
 ---
 
@@ -179,7 +184,7 @@ Last updated: 2026-05-20
 - [x] Idempotency on event IDs; seeded data: 1 completed onboarding + 1 completed offboarding
 - [x] In-memory repo with cursor pagination
 - [x] **34 passing tests** — SagaRunner happy path, retries, compensation, onboarding/offboarding structure, event routing, repo
-- [ ] Real PostgreSQL persistence
+- [ ] Real MongoDB persistence
 
 ---
 
@@ -265,7 +270,7 @@ React Native · iOS + Android
 ## Infrastructure & integrations (not started)
 
 - [ ] Auth — SSO (SAML / OIDC), RBAC
-- [ ] PostgreSQL schema — apply `docs/specs/data-model.sql`
+- [ ] MongoDB collections + indexes — apply `docs/specs/data-model.sql`
 - [ ] Kafka / NATS event bus
 - [ ] Temporal workers (onboarding/offboarding sagas)
 - [ ] API gateway / BFF
@@ -280,7 +285,7 @@ React Native · iOS + Android
 | `/services/leave` | 22 | all passing |
 | `/services/workflow-engine` | 36 | all passing |
 | `/services/people` | 24 | all passing |
-| `/services/letters` | 19 | all passing |
+| `/services/letters` | 31 | all passing |
 | `/services/notifications` | 21 | all passing |
 | `/services/benefits` | 27 | all passing |
 | `/services/payroll` | 29 | all passing |
